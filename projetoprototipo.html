@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Music</title>
+</head>
+<body onload="TelaHome()">
+    
+    <div>
+        <strong>M Music </strong>
+            <button onclick="TelaHome()">PÁGINA INICIAL</button>
+            <button onclick="TelaCadastro()">CADASTRO</button>
+            <button onclick="TelaLogin()">LOGIN</button>
+           
+
+    </div>
+
+
+    <hr>
+
+    <div id="div_principal"></div>
+
+</body>
+</html>
+
+<script>
+    // TELA 1: LANDING PAGE (HOME)
+    function TelaHome(){
+        div_principal.innerHTML = `
+        <div>
+            <h1>M Music:</h1>
+            <p>Descubra um pouco mais sobre a artista Melanie Martinez e o trabalho dela.</p>
+            <button onclick="TelaSobre()">SOBRE A ARTISTA</button>
+        </div>
+
+        <br><br>
+
+        <div>
+            <div>
+            <p>Cadastre-se e tenha acesso a:</p>
+            </div>
+
+            <br>
+
+            <div>
+            <strong>Relatórios</strong>
+            <p>Receba análises diárias de uso do site</p>
+            </div>
+
+            <br>
+
+            <div>
+            <strong>Músicas</strong>
+            <p>Tenha acesso as músicas</p>
+            </div>
+        </div>
+        `;
+    }
+
+     // TELA SOBRE
+    function TelaSobre(){
+        div_principal.innerHTML = `
+        <div>
+            <h1>Sobre Melanie Martinez:</h1>
+            <p>Nascida em... Iniciou sua carreira em...blablabla</p>
+        </div>
+        `
+    }
+   
+    // TELA LOGIN
+    function TelaLogin(){
+        div_principal.innerHTML = `
+        <div>
+            Email:<br>
+            <input type="text" id="input_email"><br>
+            Senha:<br>
+            <input type="password" id="input_senha"><br>
+            <button onclick="TelaHome2()">PÁGINA SECUNDÁRIA</button>
+        </div>
+        `
+    }
+
+    // TELA PÓS LOGIN CONTENDO ACESSO A DASH E AS MUSICAS
+    function TelaHome2(){
+        div_principal.innerHTML = `
+        <div>
+            <button onclick="TelaDash()">DASH</button>
+            <button onclick="TelaMusica()">MÚSICAS</button>
+        </div>
+        `
+    }
+
+</script>
