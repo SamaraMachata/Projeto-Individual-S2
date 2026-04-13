@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M Music</title>
+    <title>Undertale now</title>
 </head>
 <body onload="TelaHome()">
     
     <div>
-        <strong>M Music </strong>
+        <strong>Undertale Now</strong>
             <button onclick="TelaHome()">PÁGINA INICIAL</button>
             <button onclick="TelaCadastro()">CADASTRO</button>
             <button onclick="TelaLogin()">LOGIN</button>
@@ -29,9 +29,8 @@
     function TelaHome(){
         div_principal.innerHTML = `
         <div>
-            <h1>M Music:</h1>
-            <p>Descubra um pouco mais sobre a artista Melanie Martinez e o trabalho dela.</p>
-            <button onclick="TelaSobre()">SOBRE A ARTISTA</button>
+            <h1>Undertale now:</h1>
+            <p>Descubra um pouco mais sobre este jogo indie.</p>
         </div>
 
         <br><br>
@@ -44,15 +43,20 @@
             <br>
 
             <div>
-            <strong>Relatórios</strong>
-            <p>Receba análises diárias de uso do site</p>
+            <strong>Informações</strong>
+            <p>mais informações exclusivas sobre o jogo</p>
             </div>
 
             <br>
 
             <div>
-            <strong>Músicas</strong>
-            <p>Tenha acesso as músicas</p>
+            <strong>Votações</strong>
+            <p>Tenha acesso as votações de personagens</p>
+            </div>
+
+             <div>
+            <strong>História</strong>
+            <p>Tenha acesso a história do jogo</p>
             </div>
         </div>
         `;
@@ -62,8 +66,8 @@
     function TelaSobre(){
         div_principal.innerHTML = `
         <div>
-            <h1>Sobre Melanie Martinez:</h1>
-            <p>Nascida em... Iniciou sua carreira em...blablabla</p>
+            <h1>Sobre a História de Undertale:</h1>
+            <p>blablabla</p>
         </div>
         `
     }
@@ -81,12 +85,13 @@
         `
     }
 
-    // TELA PÓS LOGIN CONTENDO ACESSO A DASH E AS MUSICAS
+    // TELA PÓS LOGIN CONTENDO ACESSO A DASH E A TELA SOBRE
     function TelaHome2(){
         div_principal.innerHTML = `
         <div>
             <button onclick="TelaDash()">DASH</button>
-            <button onclick="TelaMusica()">MÚSICAS</button>
+            <button onclick="TelaSobre()">SOBRE A ARTISTA</button>
+            
         </div>
         `
     }
