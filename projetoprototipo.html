@@ -7,19 +7,27 @@
 </head>
 <body onload="TelaHome()">
     
-    <div>
+    <nav>
         <strong>Undertale Now</strong>
             <button onclick="TelaHome()">PÁGINA INICIAL</button>
             <button onclick="TelaCadastro()">CADASTRO</button>
             <button onclick="TelaLogin()">LOGIN</button>
-           
-
-    </div>
+    </nav>
 
 
     <hr>
 
     <div id="div_principal"></div>
+
+
+  <canvas id="myChart"></canvas>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  
+</script>
 
 </body>
 </html>
@@ -67,7 +75,17 @@
         div_principal.innerHTML = `
         <div>
             <h1>Sobre a História de Undertale:</h1>
-            <p>blablabla</p>
+            <p>História principal
+Há muito tempo, duas raças governavam a Terra: Humanos e Monstros. Um dia, uma guerra irrompeu entre as duas raças. Após uma longa batalha, os humanos saíram vitoriosos. Sete de seus maiores magos confinaram os monstros no Subsolo com uma barreira mágica . No entanto, essa barreira não é perfeita.<br>
+
+O ser humano caído aproximando-se do Monte Ebott.<br>
+O ser humano caído aproximando-se do Monte Ebott.<br>
+
+Muitos anos após a guerra, em 201X, uma criança humana escala o Monte Ebott por razões misteriosas. Dizem que aqueles que escalam a montanha jamais retornam. A criança descobre um enorme buraco na montanha e cai dentro dele. A partir daí, a história começa.<br>
+
+O protagonista inicia sua aventura nas Ruínas e logo encontra Flowey , uma flor sádica que tenta matá-lo por puro divertimento. Ele é impedido por uma monstra maternal chamada Toriel , que ensina a criança a resolver enigmas e conflitos no Subsolo. Após uma batalha épica contra ela, Toriel permite que a criança saia das Ruínas.<br>
+
+O desenrolar da história na seção principal do jogo é determinado pelas ações do protagonista em relação aos personagens secundários e outros monstros. O enredo, assim como grande parte dos diálogos, pode variar bastante dependendo das decisões do jogador. Os três caminhos principais são a Rota Neutra , a Rota Pacifista Verdadeira e a Rota Genocida .<br></p>
         </div>
         `
     }
@@ -75,12 +93,16 @@
     // TELA LOGIN
     function TelaLogin(){
         div_principal.innerHTML = `
+          <div>
+    <p>Já possui cadastro? clique aqui para fazer o login</p>
+    <button onclick="TelaCadastro()">CADASTRAR</button>    
+    </div>
         <div>
             Email:<br>
             <input type="text" id="input_email"><br>
             Senha:<br>
             <input type="password" id="input_senha"><br>
-            <button onclick="TelaHome2()">PÁGINA SECUNDÁRIA</button>
+            <button onclick="TelaHome2()">ENTRAR</button>
         </div>
         `
     }
@@ -90,10 +112,59 @@
         div_principal.innerHTML = `
         <div>
             <button onclick="TelaDash()">DASH</button>
-            <button onclick="TelaSobre()">SOBRE A ARTISTA</button>
+            <button onclick="TelaSobre()">SOBRE O JOGO</button>
             
         </div>
         `
     }
+
+    // TELA CADASTRO
+   function TelaCadastro(){
+    div_principal.innerHTML = `
+    <div>
+    <p>Já possui cadastro? clique aqui para fazer o login</p>
+    <button onclick="TelaLogin()">LOGIN</button>    
+    </div>
+    
+     <div>
+            Email:<br>
+            <input type="text" id="input_emailCadastro"><br>
+            Senha:<br>
+            <input type="password" id="input_senhaCadastro"><br>
+            Número:<br>
+            <input type="text" id="input_numero"><br>
+            <button onclick="TelaHome2()">ENTRAR</button>
+    </div>
+    `
+   }
+
+    function TelaDash(){
+
+ const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey'],
+      datasets: [{
+        label: '# of Votes',
+        data: [15, 24, 20, 34, 17, 20, 26, 13, 5],
+        backgroundColor: [
+            '#E100FF'
+        ]
+       // borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+    }
+
+
 
 </script>
