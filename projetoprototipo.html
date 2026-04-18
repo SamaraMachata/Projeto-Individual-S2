@@ -18,29 +18,31 @@
     <hr>
 
     <div id="div_principal"></div>
+    <div id="div_mensagem"></div>
 
 
-  <canvas id="myChart"></canvas>
 
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<script>
-  
-</script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        
+    </script>
 
 </body>
 </html>
 
 <script>
+    let votosGlobais = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
     // TELA 1: LANDING PAGE (HOME)
     function TelaHome(){
         div_principal.innerHTML = `
         <div>
             <h1>Undertale now:</h1>
             <p>Descubra um pouco mais sobre este jogo indie.</p>
-        </div>
-
+            </div>
+            
         <br><br>
 
         <div>
@@ -70,85 +72,130 @@
         `;
     }
 
-     // TELA SOBRE
+    // TELA SOBRE
     function TelaSobre(){
         div_principal.innerHTML = `
+        <button onclick="TelaHome2()">VOLTAR</button>
+        
         <div>
             <h1>Sobre a História de Undertale:</h1>
-            <p>História principal
-Há muito tempo, duas raças governavam a Terra: Humanos e Monstros. Um dia, uma guerra irrompeu entre as duas raças. Após uma longa batalha, os humanos saíram vitoriosos. Sete de seus maiores magos confinaram os monstros no Subsolo com uma barreira mágica . No entanto, essa barreira não é perfeita.<br>
+            <p>
+                Há muito tempo, duas raças governavam a Terra:
+                <br> Humanos e Monstros. Um dia, uma guerra irrompeu entre as duas raças. 
+                <br>Após uma longa batalha, os humanos saíram vitoriosos. Sete de seus maiores magos confinaram os monstros no Subsolo com uma barreira mágica . 
+                <br>No entanto, essa barreira não é perfeita.<br>
+<br>
 
-O ser humano caído aproximando-se do Monte Ebott.<br>
-O ser humano caído aproximando-se do Monte Ebott.<br>
+Muitos anos após a guerra, em 201X, uma criança humana escala o Monte Ebott por razões misteriosas. 
+<br>Dizem que aqueles que escalam a montanha jamais retornam. 
+<br>A criança descobre um enorme buraco na montanha e cai dentro dele.
+<br>A partir daí, a história começa.<br>
 
-Muitos anos após a guerra, em 201X, uma criança humana escala o Monte Ebott por razões misteriosas. Dizem que aqueles que escalam a montanha jamais retornam. A criança descobre um enorme buraco na montanha e cai dentro dele. A partir daí, a história começa.<br>
+O protagonista inicia sua aventura nas Ruínas e logo encontra Flowey , uma flor sádica que tenta matá-lo por puro divertimento. 
+<br>Ele é impedido por uma monstra maternal chamada Toriel , que ensina a criança a resolver enigmas e conflitos no Subsolo. 
+<br>Após uma batalha épica contra ela, Toriel permite que a criança saia das Ruínas.<br>
 
-O protagonista inicia sua aventura nas Ruínas e logo encontra Flowey , uma flor sádica que tenta matá-lo por puro divertimento. Ele é impedido por uma monstra maternal chamada Toriel , que ensina a criança a resolver enigmas e conflitos no Subsolo. Após uma batalha épica contra ela, Toriel permite que a criança saia das Ruínas.<br>
-
-O desenrolar da história na seção principal do jogo é determinado pelas ações do protagonista em relação aos personagens secundários e outros monstros. O enredo, assim como grande parte dos diálogos, pode variar bastante dependendo das decisões do jogador. Os três caminhos principais são a Rota Neutra , a Rota Pacifista Verdadeira e a Rota Genocida .<br></p>
-        </div>
-        `
+O desenrolar da história na seção principal do jogo é determinado pelas ações do protagonista em relação aos personagens secundários e outros monstros. 
+<br>O enredo, assim como grande parte dos diálogos, pode variar bastante dependendo das decisões do jogador. 
+<br>Os três caminhos principais são a Rota Neutra , a Rota Pacifista Verdadeira e a Rota Genocida .<br></p>
+</div> `
     }
    
     // TELA LOGIN
     function TelaLogin(){
         div_principal.innerHTML = `
-          <div>
-    <p>Já possui cadastro? clique aqui para fazer o login</p>
-    <button onclick="TelaCadastro()">CADASTRAR</button>    
-    </div>
         <div>
-            Email:<br>
-            <input type="text" id="input_email"><br>
-            Senha:<br>
-            <input type="password" id="input_senha"><br>
-            <button onclick="TelaHome2()">ENTRAR</button>
-        </div>
+            <p>Já possui cadastro? clique aqui para fazer o login</p>
+            <button onclick="TelaCadastro()">CADASTRAR</button>    
+            </div>
+            <div>
+                Email:<br>
+                <input type="text" id="input_email"><br>
+                Senha:<br>
+                <input type="password" id="input_senha"><br>
+                <button onclick="ValidarLogin()">ENTRAR</button>
+                </div>
         `
+        
     }
-
-    // TELA PÓS LOGIN CONTENDO ACESSO A DASH E A TELA SOBRE
-    function TelaHome2(){
+    
+    // TELA CADASTRO
+    function TelaCadastro(){
         div_principal.innerHTML = `
         <div>
-            <button onclick="TelaDash()">DASH</button>
-            <button onclick="TelaSobre()">SOBRE O JOGO</button>
+            <p>Já possui cadastro? clique aqui para fazer o login</p>
+            <button onclick="TelaLogin()">LOGIN</button>    
+            </div>
             
-        </div>
-        `
-    }
+            <div>
+                Email:<br>
+                <input type="text" id="input_emailCadastro"><br>
+                Senha:<br>
+                <input type="password" id="input_senhaCadastro"><br>
+                Número:<br>
+                <input type="text" id="input_numero"><br>
+                <button onclick="ValidarCadastro()">ENTRAR</button>
+                </div>
+                `
+            }
+            
+            // TELA PÓS LOGIN CONTENDO ACESSO A DASH E A TELA SOBRE
+            function TelaHome2(){
+                div_mensagem.innerHTML = ``
+                div_principal.innerHTML = `
+                <div>
+                    <button onclick="TelaDash()">DASH</button>
+                    <button onclick="TelaSobre()">SOBRE O JOGO</button>
+                    <button onclick="TelaVotar()">VOTAR</button>
+                    </div>
+                    `
+                }
+                
+                //TELA DE VOTAÇÃO
+                function TelaVotar(){
+                 div_principal.innerHTML = `
+                 <h1>Quem é seu personagem Favorito?</h1>
+                <div >
+                    <button onclick="registrarVoto(0)">Frisk</button>
+                    <button onclick="registrarVoto(1)">Sans</button>
+                    <button onclick="registrarVoto(2)">Papyrus</button>
+                    <button onclick="registrarVoto(3)">Toriel</button>
+                    <button onclick="registrarVoto(4)">Undyne</button>
+                    <button onclick="registrarVoto(5)">Asgore</button>
+                    <button onclick="registrarVoto(6)">Mettaton</button>
+                    <button onclick="registrarVoto(7)">Alphys</button>
+                    <button onclick="registrarVoto(8)">Flowey</button>
+                    <button onclick="registrarVoto(9)">Asriel</button>
+                    <button onclick="registrarVoto(10)">Napstablook</button>
+                    <button onclick="registrarVoto(11)">Temmie</button>
+                    <button onclick="registrarVoto(12)">Mad Mew Mew</button>
+                    <button onclick="registrarVoto(13)">Muffet</button>
+                </div> 
+                <button onclick="TelaHome2()">VOLTAR</button>
+                 `    
+                }
 
-    // TELA CADASTRO
-   function TelaCadastro(){
-    div_principal.innerHTML = `
-    <div>
-    <p>Já possui cadastro? clique aqui para fazer o login</p>
-    <button onclick="TelaLogin()">LOGIN</button>    
-    </div>
-    
-     <div>
-            Email:<br>
-            <input type="text" id="input_emailCadastro"><br>
-            Senha:<br>
-            <input type="password" id="input_senhaCadastro"><br>
-            Número:<br>
-            <input type="text" id="input_numero"><br>
-            <button onclick="TelaHome2()">ENTRAR</button>
-    </div>
-    `
-   }
+     function registrarVoto(personagemIndex) {
+     votosGlobais[personagemIndex]++;
+    div_mensagem.innerHTML = `<span style="color: green;"><b>Voto para ${personagemIndex} registrado!</b></span>`;
+}
 
+   //TELA DE DASHBOARD
     function TelaDash(){
+    div_principal.innerHTML = `<button onclick="TelaHome2()">VOLTAR</button>
+ 
+   <canvas id="myChart"></canvas>
 
- const ctx = document.getElementById('myChart');
+ `
+const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey'],
+      labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey', 'Asriel', 'Napstablook', 'Temmie', 'Mad Mew Mew','Muffet' ],
       datasets: [{
-        label: '# of Votes',
-        data: [15, 24, 20, 34, 17, 20, 26, 13, 5],
+        label: 'Votos de personagens favoritos',
+        data: votosGlobais,
         backgroundColor: [
             '#E100FF'
         ]
@@ -163,8 +210,53 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
       }
     }
   });
+ 
     }
 
+    //VERIFICAÇÃO LOGIN
+ function ValidarLogin(){
+  let email = input_email.value
+  let senha = input_senha.value
+  div_mensagem.innerHTML = ""
 
+  if (email == "" || senha == ""){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>Preencha todos os campos!</b></span>`
+    return;
+  }else if (!email.includes(`@`)){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>Falta @ no campo email!</b></span>`
+    return;
+  }else if (senha.length < 8){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>A Senha precisa ter 8 digitos ou mais!</b></span>`
+    return;
+  }
+  
+  TelaHome2()
+
+ }
+
+ //VERIFICAÇÃO CADASTRO
+ function ValidarCadastro(){
+ let email = input_emailCadastro.value
+ let senha = input_senhaCadastro.value
+ let numero = input_numero.value
+  div_mensagem.innerHTML = ""
+
+  if (email == "" || senha == ""){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>Preencha todos os campos!</b></span>`
+    return;
+  }else if (!email.includes(`@`)){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>Falta @ no campo email!</b></span>`
+    return;
+  }else if (senha.length < 8){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>A Senha precisa ter 8 digitos ou mais!</b></span>`
+    return;
+  }else if (numero < 8 ){
+     div_mensagem.innerHTML = `<span style="color: red;"<b>Número Inválido!</b></span>`
+    return;
+  }
+  
+  TelaHome2()
+
+ }
 
 </script>
