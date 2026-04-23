@@ -11,13 +11,16 @@
     
     <nav class="nav_pag_home" >
         <strong class="titulo_pag_home" >Undertale Now</strong>
-            <button class="btn_pag_home" onclick="TelaHome()">PÁGINA INICIAL</button>
-            <button  class="btn_pag_cadastro" onclick="TelaCadastro()">CADASTRO</button>
-            <button class="btn_pag_login" onclick="TelaLogin()">LOGIN</button>
+           <div class="botoes">
+
+             <button class="btn_pag_home" onclick="TelaHome()">PÁGINA INICIAL</button>
+             <button  class="btn_pag_cadastro" onclick="TelaCadastro()">CADASTRO</button>
+             <button class="btn_pag_login" onclick="TelaLogin()">LOGIN</button>
+
+           </div> 
     </nav>
 
 
-    <hr>
 
     <div id="div_principal"></div>
     <div id="div_mensagem"></div>
@@ -42,7 +45,7 @@
         div_principal.innerHTML = `
         <div>
             <h1><b>Undertale Now:</b></h1>
-            <p>Descubra um pouco mais sobre este rpg.</p>
+            <p>"Um lugar onde sua DETERMINAÇÃO é a chave para descobrir todos os segredos do jogo."</p>
             </div>
             
         <br><br>
@@ -126,7 +129,7 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
         div_principal.innerHTML = `
         <div>
             <p>Já possui cadastro? clique aqui para fazer o login</p>
-            <button onclick="TelaLogin()">LOGIN</button>    
+            <button class="btn_login2" onclick="TelaLogin()">LOGIN</button>    
             </div>
             
             <div>
@@ -136,7 +139,7 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                 <input type="password" id="input_senhaCadastro"><br>
                 Número:<br>
                 <input type="text" id="input_numero"><br>
-                <button onclick="ValidarCadastro()">ENTRAR</button>
+                <button class="btn_entrarCad" onclick="ValidarCadastro()">ENTRAR</button>
                 </div>
                 `
             }
@@ -146,9 +149,9 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                 div_mensagem.innerHTML = ``
                 div_principal.innerHTML = `
                 <div>
-                    <button onclick="TelaDash()">DASH</button>
-                    <button onclick="TelaSobre()">SOBRE O JOGO</button>
-                    <button onclick="TelaVotar()">VOTAR</button>
+                    <button class="btn_dash" onclick="TelaDash()">DASH</button>
+                    <button class="btn_sobre" onclick="TelaSobre()">SOBRE O JOGO</button>
+                    <button class="btn_votar" onclick="TelaVotar()">VOTAR</button>
                     </div>
                     `
                 }
