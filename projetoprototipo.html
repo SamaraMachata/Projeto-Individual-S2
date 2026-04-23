@@ -7,13 +7,13 @@
     <title>Undertale now</title>
     
 </head>
-<body onload="TelaHome()">
+<body class="pag_home" onload="TelaHome()">
     
-    <nav>
-        <strong>Undertale Now</strong>
-            <button onclick="TelaHome()">PÁGINA INICIAL</button>
-            <button onclick="TelaCadastro()">CADASTRO</button>
-            <button onclick="TelaLogin()">LOGIN</button>
+    <nav class="nav_pag_home" >
+        <strong class="titulo_pag_home" >Undertale Now</strong>
+            <button class="btn_pag_home" onclick="TelaHome()">PÁGINA INICIAL</button>
+            <button  class="btn_pag_cadastro" onclick="TelaCadastro()">CADASTRO</button>
+            <button class="btn_pag_login" onclick="TelaLogin()">LOGIN</button>
     </nav>
 
 
@@ -41,8 +41,8 @@
     function TelaHome(){
         div_principal.innerHTML = `
         <div>
-            <h1>Undertale now:</h1>
-            <p>Descubra um pouco mais sobre este jogo indie.</p>
+            <h1><b>Undertale Now:</b></h1>
+            <p>Descubra um pouco mais sobre este rpg.</p>
             </div>
             
         <br><br>

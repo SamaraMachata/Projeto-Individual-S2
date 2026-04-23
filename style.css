@@ -1,0 +1,46 @@
+.pag_home{
+background-color: rgb(59, 5, 109);
+}
+    
+.nav_pag_home{
+    background-color: blueviolet;
+    padding: 1px;
+    border-radius: 8px;
+    margin: 4px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+.titulo_pag_home{
+font-size: 30px;
+text-align:center;
+margin: 80px;
+
+}
+.btn_pag_home{
+    background-color: rgb(110, 33, 181);
+border-radius: 8px;
+border-color: rgb(102, 29, 170);
+color: black;
+
+padding: 8px;
+}
+.btn_pag_cadastro{
+  background-color: rgb(110, 33, 181);
+border-radius: 8px;
+border-color: rgb(102, 29, 170);
+color: black;
+
+padding: 8px;
+}
+.btn_pag_login{
+  background-color: rgb(110, 33, 181);
+border-radius: 8px;
+border-color: rgb(102, 29, 170);
+color: black;
+
+padding: 8px;
+}
