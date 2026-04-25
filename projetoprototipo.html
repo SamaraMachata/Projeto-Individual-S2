@@ -20,13 +20,12 @@
            </div> 
     </nav>
 
-
+   
 
     <div id="div_principal"></div>
     <div id="div_mensagem"></div>
 
-
-
+    
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
@@ -43,37 +42,52 @@
     // TELA 1: LANDING PAGE (HOME)
     function TelaHome(){
         div_principal.innerHTML = `
-        <div>
+        <div class="titulo_home">
             <h1><b>Undertale Now:</b></h1>
             <p>"Um lugar onde sua DETERMINAÇÃO é a chave para descobrir todos os segredos do jogo."</p>
             </div>
             
         <br><br>
 
-        <div>
-            <div>
-            <p>Cadastre-se e tenha acesso a:</p>
+        <section class="tenha_acesso">
+  <img src="./img/Napstablook_overworld.webp" alt="napstablook" class="img_lateralDireita">
+          
+            <div class="tenha_acessoTitulo">
+            <strong>Cadastre-se e tenha acesso a:</strong>
             </div>
 
             <br>
 
-            <div>
+            <div class="box_info">
             <strong>Informações</strong>
-            <p>mais informações exclusivas sobre o jogo</p>
+            <p>mais informações exclusivas 
+              <br>sobre o jogo</p>
             </div>
 
             <br>
 
-            <div>
+            <div class="box_votos">
             <strong>Votações</strong>
-            <p>Tenha acesso as votações de personagens</p>
+            <p>Tenha acesso as 
+              <br>votações de personagens</p>
             </div>
+            
+            <br>
 
-             <div>
+             <div class="box_hist">
             <strong>História</strong>
-            <p>Tenha acesso a história do jogo</p>
+            <p>Tenha acesso a
+              <br> história do jogo</p>
             </div>
-        </div>
+            
+            <br>
+
+            <div class="box_game">
+              <strong>Mini Game</strong>
+              <p>Tenha acesso a 
+                <br>um mini game interativo</p>
+            </div>
+        </section>
         `;
     }
 
@@ -152,6 +166,7 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                     <button class="btn_dash" onclick="TelaDash()">DASH</button>
                     <button class="btn_sobre" onclick="TelaSobre()">SOBRE O JOGO</button>
                     <button class="btn_votar" onclick="TelaVotar()">VOTAR</button>
+                    <button class="btn_game" onclick="TelaGame()">MINI GAME</button>
                     </div>
                     `
                 }
@@ -161,19 +176,34 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                  div_principal.innerHTML = `
                  <h1>Quem é seu personagem Favorito?</h1>
                 <div >
+                  
                     <button onclick="registrarVoto(0)">Frisk</button>
+
                     <button onclick="registrarVoto(1)">Sans</button>
+    <img src="./img/Sans_overworld.webp" alt="sans" class="img_sans">
+
                     <button onclick="registrarVoto(2)">Papyrus</button>
+
                     <button onclick="registrarVoto(3)">Toriel</button>
+
                     <button onclick="registrarVoto(4)">Undyne</button>
+
                     <button onclick="registrarVoto(5)">Asgore</button>
+
                     <button onclick="registrarVoto(6)">Mettaton</button>
+
                     <button onclick="registrarVoto(7)">Alphys</button>
+
                     <button onclick="registrarVoto(8)">Flowey</button>
+
                     <button onclick="registrarVoto(9)">Asriel</button>
+                    
                     <button onclick="registrarVoto(10)">Napstablook</button>
+                    
                     <button onclick="registrarVoto(11)">Temmie</button>
+                    
                     <button onclick="registrarVoto(12)">Mad Mew Mew</button>
+                    
                     <button onclick="registrarVoto(13)">Muffet</button>
                 </div> 
                 <button onclick="TelaHome2()">VOLTAR</button>
@@ -262,6 +292,11 @@ const ctx = document.getElementById('myChart');
   
   TelaHome2()
 
+ }
+
+ // TELA MINI GAME
+ function TelaGame(){
+  //minigame de rpg
  }
 
 </script>
