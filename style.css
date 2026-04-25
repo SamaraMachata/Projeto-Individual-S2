@@ -109,6 +109,19 @@ color: white;
 
 }
 
+.btn_voltar{
+       background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white;
+}
+
+.btn_entrar{
+     background-color: black;
+     border: 2px solid white;
+     border-radius: 0px;
+     color: white;
+}
 .titulo_home{
      color: white;
      background-color: black;
@@ -182,4 +195,135 @@ color: white;
      border: 2px solid white;
      border-radius: 0px;
      padding: 20px;
+}
+
+
+.btn_frisk{
+       background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+
+.btn_sans{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+
+.btn_papyrus{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_toriel{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_undyne{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_asgore{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_mettaton{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_alphys{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_flowey{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_asriel{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_napsta{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_temmie{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_madMew{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+.btn_muffet{
+      background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white; 
+}
+
+.box_telavotos{
+   border: 5px solid white;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   background-color: black;
+
+}
+.box_telavotos h1{
+     color: white;
+     margin-bottom: 20px;
+}
+.organizar_votos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.box_personagem{
+    width: 150px;        
+    height: 150px;
+    background-color: black;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+     
+}
+.box_personagem img{
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+.box_personagem button{
+     cursor: pointer;
 }

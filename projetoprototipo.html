@@ -20,12 +20,10 @@
            </div> 
     </nav>
 
-   
 
     <div id="div_principal"></div>
     <div id="div_mensagem"></div>
 
-    
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
@@ -94,7 +92,7 @@
     // TELA SOBRE
     function TelaSobre(){
         div_principal.innerHTML = `
-        <button onclick="TelaHome2()">VOLTAR</button>
+        <button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
         
         <div>
             <h1>Sobre a História de Undertale:</h1>
@@ -125,16 +123,16 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
         div_principal.innerHTML = `
         <div>
             <p>Já possui cadastro? clique aqui para fazer o login</p>
-            <button onclick="TelaCadastro()">CADASTRAR</button>    
+            <button class="btn_entrarCad" onclick="TelaCadastro()">CADASTRAR</button>    
             </div>
             <div>
                 Email:<br>
                 <input type="text" id="input_email"><br>
                 Senha:<br>
                 <input type="password" id="input_senha"><br>
-                <button onclick="ValidarLogin()">ENTRAR</button>
+                <button class="btn_entrar" onclick="ValidarLogin()">ENTRAR</button>
                 </div>
-        `
+                `
         
     }
     
@@ -171,44 +169,92 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                     `
                 }
                 
-                //TELA DE VOTAÇÃO
-                function TelaVotar(){
-                 div_principal.innerHTML = `
-                 <h1>Quem é seu personagem Favorito?</h1>
-                <div >
-                    <button onclick="registrarVoto(0)">Frisk</button>
+               //TELA DE VOTAÇÃO
+ function TelaVotar(){
+ div_principal.innerHTML = `
 
-                    <button onclick="registrarVoto(1)">Sans</button>
-    <img src="./img/Sans_overworld.webp" alt="sans" class="img_sans">
+ <button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
 
-                    <button onclick="registrarVoto(2)">Papyrus</button>
+                 
+<div class="box_telavotos">
+    <h1>Qual é seu personagem Favorito?</h1>
+            
+    <div class="organizar_votos">
+    
+    <div class="box_personagem">
+       <img src="./img/Frisk_overworld.webp">
+       <button class="btn_frisk" onclick="registrarVoto(0)">Frisk</button>
+    </div>
 
-                    <button onclick="registrarVoto(3)">Toriel</button>
-
-                    <button onclick="registrarVoto(4)">Undyne</button>
-
-                    <button onclick="registrarVoto(5)">Asgore</button>
-
-                    <button onclick="registrarVoto(6)">Mettaton</button>
-
-                    <button onclick="registrarVoto(7)">Alphys</button>
+    <div class="box_personagem">
+        <img src="./img/Sans_overworld.webp">
+        <button class="btn_sans" onclick="registrarVoto(1)">Sans</button>
+    </div>
                     
+    <div class="box_personagem">
+        <img src="./img/Papyrus_overworld.webp">
+        <button class="btn_papyrus" onclick="registrarVoto(2)">Papyrus</button>
+    </div>
+                  
+    <div class="box_personagem">
+        <img src="./img/Toriel_overworld.webp">
+        <button class="btn_toriel" onclick="registrarVoto(3)">Toriel</button>
+    </div>
+                  
+    <div class="box_personagem">
+        <img src="./img/Undyne_overworld.webp">
+        <button class="btn_undyne" onclick="registrarVoto(4)">Undyne</button>
+    </div>
                     
-                    <button onclick="registrarVoto(8)">Flowey</button>
+    <div class="box_personagem">
+        <img src="./img/Asgore_Dreemurr_overworld.webp">
+        <button class="btn_asgore" onclick="registrarVoto(5)">Asgore</button>
+    </div>
+                      
+    <div class="box_personagem">
+        <img src="./img/mettaton (1).png">
+        <button class="btn_mettaton" onclick="registrarVoto(6)">Mettaton</button>
+    </div>
+                        
+    <div class="box_personagem">
+        <img src="./img/Alphys_overworld.webp">
+        <button class="btn_alphys" onclick="registrarVoto(7)">Alphys</button>
+    </div>
+                          
+    <div class="box_personagem">
+        <img src="./img/Flowey_overworld.webp">
+        <button class="btn_flowey" onclick="registrarVoto(8)">Flowey</button>                           
+    </div>
+                            
+    <div class="box_personagem">
+        <img src="./img/Asriel_Dreemurr_overworld.webp">
+        <button class="btn_asriel" onclick="registrarVoto(9)">Asriel</button>
+    </div>
+                              
+    <div class="box_personagem">
+        <img src="./img/Napstablook_overworld.webp">
+        <button class="btn_napsta" onclick="registrarVoto(10)">Napstablook</button>
+    </div>
+                                
+    <div class="box_personagem">
+        <img src="./img/temmie.png">
+        <button class="btn_temmie" onclick="registrarVoto(11)">Temmie</button>
+    </div>
+                                  
+    <div class="box_personagem">
+        <img src="./img/MadMewMew.webp">
+        <button class="btn_madMew" onclick="registrarVoto(12)">Mad Mew Mew</button>
+    </div>
+                                    
+    <div class="box_personagem">
+        <img src="./img/muffet.png">
+        <button class="btn_muffet" onclick="registrarVoto(13)">Muffet</button>
+    </div>
                     
-                    <button onclick="registrarVoto(9)">Asriel</button>
-                    
-                    <button onclick="registrarVoto(10)">Napstablook</button>
-                    
-                    <button onclick="registrarVoto(11)">Temmie</button>
-                    
-                    <button onclick="registrarVoto(12)">Mad Mew Mew</button>
-                    
-                    <button onclick="registrarVoto(13)">Muffet</button>
-                </div> 
-                <button onclick="TelaHome2()">VOLTAR</button>
-                 `    
-                }
+    </div> 
+ </div>
+     `    
+    }
 
      function registrarVoto(personagemIndex) {
      votosGlobais[personagemIndex]++;
@@ -217,7 +263,7 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
 
    //TELA DE DASHBOARD
     function TelaDash(){
-    div_principal.innerHTML = `<button onclick="TelaHome2()">VOLTAR</button>
+    div_principal.innerHTML = `<button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
  
    <canvas id="myChart"></canvas>
 
