@@ -93,7 +93,7 @@
     function TelaSobre(){
         div_principal.innerHTML = `
         <button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
-        <br>
+        
         <div class="box_sobrejogo">
             <h1>Sobre a História de Undertale:</h1>
             <p>
@@ -424,7 +424,7 @@ Muffet foi originalmente criada por um fã durante uma campanha de apoio ao jogo
    <canvas class="box_dash" id="myChart"></canvas>
 
  `
-const ctx = document.getElementById('myChart');
+let ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
     type: 'bar',
@@ -499,6 +499,15 @@ const ctx = document.getElementById('myChart');
  // TELA MINI GAME
  function TelaGame(){
   //minigame de rpg
+  div_principal.innerHTML =`
+ <button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
+ 
+  <div class="box_minigame">
+  <h1>Responda as perguntas a seguir corretamente para receber sua recompensa:</h1>
+
+  </div>
+  `
+
  }
 
 </script>
