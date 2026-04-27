@@ -93,8 +93,8 @@
     function TelaSobre(){
         div_principal.innerHTML = `
         <button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
-        
-        <div>
+        <br>
+        <div class="box_sobrejogo">
             <h1>Sobre a História de Undertale:</h1>
             <p>
                 Há muito tempo, duas raças governavam a Terra:
@@ -115,13 +115,33 @@ O protagonista inicia sua aventura nas Ruínas e logo encontra Flowey , uma flor
 O desenrolar da história na seção principal do jogo é determinado pelas ações do protagonista em relação aos personagens secundários e outros monstros. 
 <br>O enredo, assim como grande parte dos diálogos, pode variar bastante dependendo das decisões do jogador. 
 <br>Os três caminhos principais são a Rota Neutra , a Rota Pacifista Verdadeira e a Rota Genocida .<br></p>
-</div> `
+</div> 
+<br>
+<div class="box_sobrepersonagem">
+  <h1>Sobre cada personagem:</h1>
+
+  <div><p>
+    <h1>Frisk</h1>
+    Protagonista de Undertale, Frisk é uma criança humana que cai no subsolo, um mundo habitado
+    por monstros.
+    <br>Ao longo da jornada, o jogador decide como Frisk interage com esse mundo:
+    com violência, indiferença ou compaixão. 
+    <br>Essas escolhas afetam profundamente a história
+    e o destino de todos os personagens, tornando Frisk uma figura central na narrativa.
+<br>
+    <br>Curiosidade:<br>
+    O jogo nunca define o gênero de Frisk, justamente para que qualquer jogador possa se identificar com o personagem.
+  </p></div>
+</div>
+
+`
     }
    
     // TELA LOGIN
     function TelaLogin(){
         div_principal.innerHTML = `
-        <div>
+        <div class="box_login">
+          <div>
             <p>Já possui cadastro? clique aqui para fazer o login</p>
             <button class="btn_entrarCad" onclick="TelaCadastro()">CADASTRAR</button>    
             </div>
@@ -132,6 +152,7 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                 <input type="password" id="input_senha"><br>
                 <button class="btn_entrar" onclick="ValidarLogin()">ENTRAR</button>
                 </div>
+                </div>
                 `
         
     }
@@ -139,7 +160,8 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
     // TELA CADASTRO
     function TelaCadastro(){
         div_principal.innerHTML = `
-        <div>
+        <div class="box_cadastro">
+          <div>
             <p>Já possui cadastro? clique aqui para fazer o login</p>
             <button class="btn_login2" onclick="TelaLogin()">LOGIN</button>    
             </div>
@@ -153,15 +175,16 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
                 <input type="text" id="input_numero"><br>
                 <button class="btn_entrarCad" onclick="ValidarCadastro()">ENTRAR</button>
                 </div>
+                </div>
                 `
             }
             
             // TELA PÓS LOGIN CONTENDO ACESSO A DASH E A TELA SOBRE
             function TelaHome2(){
-                div_mensagem.innerHTML = ``
+               div_mensagem.innerHTML = ``
                 div_principal.innerHTML = `
-                <div>
-                    <button class="btn_dash" onclick="TelaDash()">DASH</button>
+                <div class="box_home2">
+                    <button class="btn_dash" onclick="TelaDash()">DASHBOARD</button>
                     <button class="btn_sobre" onclick="TelaSobre()">SOBRE O JOGO</button>
                     <button class="btn_votar" onclick="TelaVotar()">VOTAR</button>
                     <button class="btn_game" onclick="TelaGame()">MINI GAME</button>
@@ -265,7 +288,7 @@ O desenrolar da história na seção principal do jogo é determinado pelas aç�
     function TelaDash(){
     div_principal.innerHTML = `<button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
  
-   <canvas id="myChart"></canvas>
+   <canvas class="box_dash" id="myChart"></canvas>
 
  `
 const ctx = document.getElementById('myChart');
