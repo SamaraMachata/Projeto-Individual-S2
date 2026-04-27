@@ -326,13 +326,13 @@ color: white;
     margin-bottom: 10px;
 
 }
-.box_personagem button{
+
+button:hover{
      cursor: pointer;
+     color: yellow;
 }
 
 .box_home2{
-    
-
     background-color: black;
     width: 1000px;
     max-width: 95%;
