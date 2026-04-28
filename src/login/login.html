@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/global.css">
 
 </head>
 <body>
-      <div id="div_principal"></div>
-    <div id="div_mensagem"></div>
-</body>
-</html>
-<script>
-   // TELA LOGIN
-    function TelaLogin(){
-        div_principal.innerHTML = `
-        <div class="box_login">
+      <div class="box">
           <div>
             <p>Já possui cadastro? clique aqui para fazer o login</p>
-            <button class="btn_entrarCad" onclick="TelaCadastro()">CADASTRAR</button>    
-            </div>
+           <a href="index.html"><button class="btn">CADASTRAR</button></a>    
+          </div>
+
             <div>
                 Email:<br>
                 <input type="text" id="input_email"><br>
                 Senha:<br>
                 <input type="password" id="input_senha"><br>
-                <button class="btn_entrar" onclick="ValidarLogin()">ENTRAR</button>
-                </div>
-                </div>
-                `
-        
-    }
+                <button class="btn" onclick="ValidarLogin()">ENTRAR</button>
+            </div>
+
+      </div>
+
+      <div id="div_mensagem"></div>
+</body>
+</html>
+<script src="script.js">
+  
        //VERIFICAÇÃO LOGIN
  function ValidarLogin(){
   let email = input_email.value
