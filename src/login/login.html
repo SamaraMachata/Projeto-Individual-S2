@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <div id="div_principal"></div>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+   // TELA LOGIN
+    function TelaLogin(){
+        div_principal.innerHTML = `
+        <div class="box_login">
+          <div>
+            <p>Já possui cadastro? clique aqui para fazer o login</p>
+            <button class="btn_entrarCad" onclick="TelaCadastro()">CADASTRAR</button>    
+            </div>
+            <div>
+                Email:<br>
+                <input type="text" id="input_email"><br>
+                Senha:<br>
+                <input type="password" id="input_senha"><br>
+                <button class="btn_entrar" onclick="ValidarLogin()">ENTRAR</button>
+                </div>
+                </div>
+                `
+        
+    }
+       //VERIFICAÇÃO LOGIN
+ function ValidarLogin(){
+  let email = input_email.value
+  let senha = input_senha.value
+  div_mensagem.innerHTML = ""
+
+  if (email == "" || senha == ""){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>Preencha todos os campos!</b></span>`
+    return;
+  }else if (!email.includes(`@`)){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>Falta @ no campo email!</b></span>`
+    return;
+  }else if (senha.length < 8){
+    div_mensagem.innerHTML = `<span style="color: red;"<b>A Senha precisa ter 8 digitos ou mais!</b></span>`
+    return;
+  }
+  
+  TelaHome2()
+
+ }
+</script>

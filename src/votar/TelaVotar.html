@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <div id="div_principal"></div>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+                  //TELA DE VOTAÇÃO
+ function TelaVotar(){
+ div_principal.innerHTML = `
+
+ <button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
+
+                 
+<div class="box_telavotos">
+    <h1>Qual é seu personagem Favorito?</h1>
+            
+    <div class="organizar_votos">
+    
+    <div class="box_personagem">
+       <img src="./img/Frisk_overworld.webp">
+       <button class="btn_frisk" onclick="registrarVoto(0)">Frisk</button>
+    </div>
+
+    <div class="box_personagem">
+        <img src="./img/Sans_overworld.webp">
+        <button class="btn_sans" onclick="registrarVoto(1)">Sans</button>
+    </div>
+                    
+    <div class="box_personagem">
+        <img src="./img/Papyrus_overworld.webp">
+        <button class="btn_papyrus" onclick="registrarVoto(2)">Papyrus</button>
+    </div>
+                  
+    <div class="box_personagem">
+        <img src="./img/Toriel_overworld.webp">
+        <button class="btn_toriel" onclick="registrarVoto(3)">Toriel</button>
+    </div>
+                  
+    <div class="box_personagem">
+        <img src="./img/Undyne_overworld.webp">
+        <button class="btn_undyne" onclick="registrarVoto(4)">Undyne</button>
+    </div>
+                    
+    <div class="box_personagem">
+        <img src="./img/Asgore_Dreemurr_overworld.webp">
+        <button class="btn_asgore" onclick="registrarVoto(5)">Asgore</button>
+    </div>
+                      
+    <div class="box_personagem">
+        <img src="./img/mettaton (1).png">
+        <button class="btn_mettaton" onclick="registrarVoto(6)">Mettaton</button>
+    </div>
+                        
+    <div class="box_personagem">
+        <img src="./img/Alphys_overworld.webp">
+        <button class="btn_alphys" onclick="registrarVoto(7)">Alphys</button>
+    </div>
+                          
+    <div class="box_personagem">
+        <img src="./img/Flowey_overworld.webp">
+        <button class="btn_flowey" onclick="registrarVoto(8)">Flowey</button>                           
+    </div>
+                            
+    <div class="box_personagem">
+        <img src="./img/Asriel_Dreemurr_overworld.webp">
+        <button class="btn_asriel" onclick="registrarVoto(9)">Asriel</button>
+    </div>
+                              
+    <div class="box_personagem">
+        <img src="./img/Napstablook_overworld.webp">
+        <button class="btn_napsta" onclick="registrarVoto(10)">Napstablook</button>
+    </div>
+                                
+    <div class="box_personagem">
+        <img src="./img/temmie.png">
+        <button class="btn_temmie" onclick="registrarVoto(11)">Temmie</button>
+    </div>
+                                  
+    <div class="box_personagem">
+        <img src="./img/MadMewMew.webp">
+        <button class="btn_madMew" onclick="registrarVoto(12)">Mad Mew Mew</button>
+    </div>
+                                    
+    <div class="box_personagem">
+        <img src="./img/muffet.png">
+        <button class="btn_muffet" onclick="registrarVoto(13)">Muffet</button>
+    </div>
+                    
+    </div> 
+ </div>
+     `    
+    }
+</script>

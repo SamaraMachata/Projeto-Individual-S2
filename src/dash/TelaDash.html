@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <div id="div_principal"></div>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    let votosGlobais = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+       //TELA DE DASHBOARD
+    function TelaDash(){
+    div_principal.innerHTML = `<button class="btn_voltar" onclick="TelaHome2()">VOLTAR</button>
+ 
+   <canvas class="box_dash" id="myChart"></canvas>
+
+ `
+let ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey', 'Asriel', 'Napstablook', 'Temmie', 'Mad Mew Mew','Muffet' ],
+      datasets: [{
+        label: 'Votos de personagens favoritos',
+        data: votosGlobais,
+        backgroundColor: [
+            '#E100FF'
+        ]
+       // borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+ 
+    }
+</script>
