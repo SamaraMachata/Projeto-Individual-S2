@@ -29,24 +29,4 @@
 </html>
 <script src="script.js">
   
-       //VERIFICAÇÃO LOGIN
- function ValidarLogin(){
-  let email = input_email.value
-  let senha = input_senha.value
-  div_mensagem.innerHTML = ""
-
-  if (email == "" || senha == ""){
-    div_mensagem.innerHTML = `<span style="color: red;"<b>Preencha todos os campos!</b></span>`
-    return;
-  }else if (!email.includes(`@`)){
-    div_mensagem.innerHTML = `<span style="color: red;"<b>Falta @ no campo email!</b></span>`
-    return;
-  }else if (senha.length < 8){
-    div_mensagem.innerHTML = `<span style="color: red;"<b>A Senha precisa ter 8 digitos ou mais!</b></span>`
-    return;
-  }
-  
-  TelaHome2()
-
- }
 </script>

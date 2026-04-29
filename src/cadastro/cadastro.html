@@ -34,49 +34,4 @@
 </html>
 <script src="script.js">
   
-    // TELA CADASTRO
-    function TelaCadastro(){
-        div_principal.innerHTML = `
-        <div class="box_cadastro">
-          <div>
-            <p>Já possui cadastro? clique aqui para fazer o login</p>
-            <button class="btn_login2" onclick="TelaLogin()">LOGIN</button>    
-            </div>
-            
-            <div>
-                Email:<br>
-                <input type="text" id="input_emailCadastro"><br>
-                Senha:<br>
-                <input type="password" id="input_senhaCadastro"><br>
-                Número:<br>
-                <input type="text" id="input_numero"><br>
-                <button class="btn_entrarCad" onclick="ValidarCadastro()">ENTRAR</button>
-                </div>
-                </div>
-                `
-            }
-     //VERIFICAÇÃO CADASTRO
- function ValidarCadastro(){
- let email = input_emailCadastro.value
- let senha = input_senhaCadastro.value
- let numero = input_numero.value
-  div_mensagem.innerHTML = ""
-
-  if (email == "" || senha == ""){
-    div_mensagem.innerHTML = `<span style="color: red;"<b>Preencha todos os campos!</b></span>`
-    return;
-  }else if (!email.includes(`@`)){
-    div_mensagem.innerHTML = `<span style="color: red;"<b>Falta @ no campo email!</b></span>`
-    return;
-  }else if (senha.length < 8){
-    div_mensagem.innerHTML = `<span style="color: red;"<b>A Senha precisa ter 8 digitos ou mais!</b></span>`
-    return;
-  }else if (numero < 8 ){
-     div_mensagem.innerHTML = `<span style="color: red;"<b>Número Inválido!</b></span>`
-    return;
-  }
-  
-  TelaHome2()
-
- }
 </script>
