@@ -14,13 +14,10 @@ function registrarVoto(i){
 
   if (email == "" || senha == ""){
     div_mensagem.innerHTML = `Preencha todos os campos!`
-    return;
   }else if (!email.includes(`@`)){
     div_mensagem.innerHTML = `Falta @ no campo email!`
-    return;
   }else if (senha.length < 8){
     div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
-    return;
   }
   
   window.location.href = "home2.html";
@@ -37,19 +34,16 @@ function registrarVoto(i){
 
   if (email == "" || senha == ""){
     div_mensagem.innerHTML = `Preencha todos os campos!`
-    return;
+    
   }else if (!email.includes(`@`)){
     div_mensagem.innerHTML = `Falta @ no campo email!`
-    return;
   }else if (senha.length < 8){
     div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
-    return;
   }else if (numero < 8 ){
      div_mensagem.innerHTML = `Número Inválido!`
-    return;
   }
   
-  window.location.href = "home2.html";
+  window.location.href = "../home2/home2.html";
 
  }
 
@@ -72,3 +66,8 @@ function renderizarGrafico(){
        }
     )
 }
+
+//GAME
+function sim(){
+  
+ }
