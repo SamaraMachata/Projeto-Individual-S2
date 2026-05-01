@@ -3,7 +3,27 @@ let votosGlobais = JSON.parse(localStorage.getItem("votos")) || [0,0,0,0,0,0,0,0
 function registrarVoto(i){
     votosGlobais[i]++;
     localStorage.setItem("votos", JSON.stringify(votosGlobais));
-    alert("Voto registrado!");
+    div_mensagem.innerHTML = "Voto registrado!";
+}
+
+ //DASH
+function renderizarGrafico(){
+    let ctx = document.getElementById('myChart');
+
+    new CharacterData(ctx,{
+        type: 'bar',
+       data: {
+         labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey', 'Asriel', 'Napstablook', 'Temmie', 'Mad Mew Mew','Muffet' ],
+         datasets: [{
+           label: 'Votos de personagens favoritos',
+           data: votosGlobais,
+           backgroundColor: [
+               '#E100FF'
+           ]
+         }]
+    }
+       }
+    )
 }
 
 //LOGIN
@@ -20,7 +40,7 @@ function registrarVoto(i){
     div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
   }
   
-  window.location.href = "home2.html";
+   window.location = "home2.html";
 
  }
 
@@ -43,31 +63,17 @@ function registrarVoto(i){
      div_mensagem.innerHTML = `Número Inválido!`
   }
   
-  window.location.href = "../home2/home2.html";
+  window.location = "home2.html";
 
  }
 
- //DASH
-function renderizarGrafico(){
-    let ctx = document.getElementById('myChart');
 
-    new CharacterData(ctx,{
-        type: 'bar',
-       data: {
-         labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey', 'Asriel', 'Napstablook', 'Temmie', 'Mad Mew Mew','Muffet' ],
-         datasets: [{
-           label: 'Votos de personagens favoritos',
-           data: votosGlobais,
-           backgroundColor: [
-               '#E100FF'
-           ]
-         }]
-    }
-       }
-    )
-}
 
 //GAME
 function sim(){
   
+ }
+
+ function nao(){
+
  }

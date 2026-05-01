@@ -29,7 +29,15 @@ font-size: 20px;
 color: white;
 margin: 0;
 text-align: left;
+background-color: black;
+border: 2px solid white;
+gap: 8px;
 
+}
+
+.titulo_home_nav{
+   font-size: 20px;
+   color: white;
 }
 
 
