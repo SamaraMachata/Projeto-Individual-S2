@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="./css/game.css">
 
 </head>
 <body class="fundo">
       <div id="div_principal"></div>
-    <div id="div_mensagem"></div>
-
-  <a href="home2.html"><button class="btn">VOLTAR</button></a> 
+      
+      <div class="box">
+        
+      <h1>Responda as perguntas a seguir corretamente para receber sua recompensa:</h1>
+      <a href="home2.html"><button class="btn">VOLTAR</button></a> 
+      
+    </div>
     
-     <div class="box_minigame">
-     <h1>Responda as perguntas a seguir corretamente para receber sua recompensa:</h1>
-       
-     
-     <p>O Sans gosta de ketchup?</p>
-     <button onclick="sim()">Sim</button>
-     <button onclick="nao()">Não</button>
-     
-     </div>
+    <div class="box_minigame">
+
+      <button class="btn_start" onclick="start()">START</button>
+      
+      
+    </div>
+    
+    <div id="div_mensagem"></div>
 
 </body>
 </html>

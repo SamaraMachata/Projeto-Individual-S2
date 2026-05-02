@@ -70,10 +70,45 @@ function renderizarGrafico(){
 
 
 //GAME
+function start(){
+ div_mensagem.innerHTML = ` <div class="perguntas">
+ <p>O Sans gosta de ketchup?</p>
+      <button class="btn" onclick="sim()">Sim</button>
+     <button class="btn" onclick="nao()">Não</button>
+    </div> `
+}
 function sim(){
-  
+  div_mensagem.innerHTML = ` <div class="perguntas">
+ <p> blablabla?</p>
+      <button class="btn" onclick="sim2()">Sim</button>
+     <button class="btn" onclick="nao2()">Não</button>
+    </div> `
  }
 
  function nao(){
+div_mensagem.innerHTML = `perdeu`
 
  }
+ function sim2(){
+  div_mensagem.innerHTML = `perdeu `
+ }
+
+ function nao2(){
+div_mensagem.innerHTML = ` <div class="perguntas">
+ <p> ajwhsvbfniolqkwahsf?</p>
+      <button class="btn" onclick="sim3()">Sim</button>
+     <button class="btn" onclick="nao3()">Não</button>
+    </div> `
+ }
+  function sim3(){
+  div_mensagem.innerHTML = `perdeu `
+ }
+
+ function nao3(){
+div_mensagem.innerHTML = ` <div class="perguntas">
+ <p> abacate?</p>
+      <button class="btn" onclick="sim3()">Sim</button>
+     <button class="btn" onclick="nao3()">Não</button>
+    </div> `
+ }
+ 
