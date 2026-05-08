@@ -1,29 +1,59 @@
 let votosGlobais = JSON.parse(localStorage.getItem("votos")) || [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 function registrarVoto(i){
-    votosGlobais[i]++;
-    localStorage.setItem("votos", JSON.stringify(votosGlobais));
-    div_mensagem.innerHTML = "Voto registrado!";
+   let personagens = [
+    `Frisk`,`Sans`,`Papyrus`,`Toriel`,`Undyne`,`Asgore`,`Mettaton`,`Alphys`,`Flowey`,`Asriel`,`Napstablook`,`Temmie`,`Mad Mew Mew`,`Muffet`
+   ];
+
+   fetch("http://127.0.0.1:3000/votos/votar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      personagem: personagens[i],
+      id_usuario: 1 
+    })
+   })
+   .then(() => {
+    div_mensagem.innerHTML = "Voto Registrado!";
+   });
 }
 
  //DASH
 function renderizarGrafico(){
-    let ctx = document.getElementById('myChart');
+  fetch("http//127.0.0.1:3000/votos/ranking")
+    .then(function (resposta){
+      return resposta.json();
+    })
+    .then(function (dados){
 
-    new CharacterData(ctx,{
-        type: 'bar',
-       data: {
-         labels: ['Frisk', 'Sans', 'Papyrus', 'Toriel', 'Undyne', 'Asgore', 'Mettaton', 'Alphys', 'Flowey', 'Asriel', 'Napstablook', 'Temmie', 'Mad Mew Mew','Muffet' ],
-         datasets: [{
-           label: 'Votos de personagens favoritos',
-           data: votosGlobais,
-           backgroundColor: [
-               '#E100FF'
-           ]
-         }]
-    }
-       }
-    )
+      let labels = [];
+      let valores = [];
+
+      for(let i = 0; i < dados.length; i++){
+        labels.push(dados[i].personagem);
+        valores.push(dados[i].total);
+      }
+
+      let ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: labels,
+          datasets:[{
+            label: "Votos de personagens favoritos",
+            data: valores
+          }]
+        }
+      });
+
+    })
+
+    .catch(function (erro){
+      console.log("erro ao carregar grafico:", erro);
+    });
 }
 
 //LOGIN
@@ -44,28 +74,7 @@ function renderizarGrafico(){
 
  }
 
- //CADASTRO
-     //VERIFICAÇÃO CADASTRO
- function ValidarCadastro(){
- let email = input_emailCadastro.value
- let senha = input_senhaCadastro.value
- let numero = input_numero.value
-  div_mensagem.innerHTML = ""
 
-  if (email == "" || senha == ""){
-    div_mensagem.innerHTML = `Preencha todos os campos!`
-    
-  }else if (!email.includes(`@`)){
-    div_mensagem.innerHTML = `Falta @ no campo email!`
-  }else if (senha.length < 8){
-    div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
-  }else if (numero < 8 ){
-     div_mensagem.innerHTML = `Número Inválido!`
-  }
-  
-  window.location = "home2.html";
-
- }
 
 
 
@@ -107,8 +116,8 @@ div_mensagem.innerHTML = ` <div class="perguntas">
  function nao3(){
 div_mensagem.innerHTML = ` <div class="perguntas">
  <p> abacate?</p>
-      <button class="btn" onclick="sim3()">Sim</button>
-     <button class="btn" onclick="nao3()">Não</button>
+      <button class="btn" onclick="sim4()">Sim</button>
+     <button class="btn" onclick="nao4()">Não</button>
     </div> `
  }
  

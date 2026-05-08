@@ -41,6 +41,28 @@
            <div id="div_mensagem"></div>
 </body>
 </html>
-<script src="./script.js">
+<script>
+    //CADASTRO
+     //VERIFICAÇÃO CADASTRO
+ function ValidarCadastro(){
+ let email = input_emailCadastro.value
+ let senha = input_senhaCadastro.value
+ let numero = input_numero.value
+  div_mensagem.innerHTML = ""
+
+  if (email == "" || senha == ""){
+    div_mensagem.innerHTML = `Preencha todos os campos!`
+    
+  }else if (!email.includes(`@`)){
+    div_mensagem.innerHTML = `Falta @ no campo email!`
+  }else if (senha.length < 8){
+    div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
+  }else if (numero < 8 ){
+     div_mensagem.innerHTML = `Número Inválido!`
+  }
+  
+  window.location = "home2.html";
+
+ }
   
 </script>
