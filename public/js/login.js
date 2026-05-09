@@ -14,7 +14,7 @@ function ValidarLogin(){
     }else if(senha.length < 8){
         div_mensagem.innerHTML = `A senha precisa ter 8 digitos ou mais!`;
     } else {
-        fetch("http://localhost:3333/usuarios/login", {
+        fetch("http://localhost:3000/usuarios/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

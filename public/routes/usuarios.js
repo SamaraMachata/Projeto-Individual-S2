@@ -10,7 +10,7 @@ router.post("/login", (req, res) => {
 
     let sql = `
     SELECT * FROM usuario 
-    WHERE email = ? ADN senha = ?
+    WHERE email = ? AND senha = ?
     `;
 
     conexao.query(sql,
@@ -20,7 +20,7 @@ router.post("/login", (req, res) => {
                 res.status(500).send(erro);
             }else {
                 if(resultado.length > 0){
-                    res.jason(resultado[0]);
+                    res.json(resultado[0]);
                 }else {
                     res.status(403).send("Login inválido");
                 }
