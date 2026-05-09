@@ -18,7 +18,7 @@ router.post("/cadastrar", (req, res) => {
         }else {
             let idVoto = resultado[0].idVoto;
 
-            let sqlRegistro = `UPDATE voto SET qtdVotos = qtdVotos + 1 WHERE idVoto = ?`;
+            let atualizarVoto = `UPDATE voto SET qtdVotos = qtdVotos + 1 WHERE idVoto = ?`;
 
             conexao.query(atualizarVoto,
                 [idVoto],
@@ -69,5 +69,7 @@ router.get("/listar", (req, res) => {
         }
     );
 });
+
+
 
 module.exports = router;

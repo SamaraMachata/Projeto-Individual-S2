@@ -33,3 +33,6 @@ function votar(personagem){
  });
 
 }
+function voltar(){
+    window.location = "home2.html";
+}
