@@ -56,23 +56,6 @@ function renderizarGrafico(){
     });
 }
 
-//LOGIN
-      //VERIFICAÇÃO LOGIN
- function ValidarLogin(){
-  let email = input_email.value
-  let senha = input_senha.value
-
-  if (email == "" || senha == ""){
-    div_mensagem.innerHTML = `Preencha todos os campos!`
-  }else if (!email.includes(`@`)){
-    div_mensagem.innerHTML = `Falta @ no campo email!`
-  }else if (senha.length < 8){
-    div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
-  }
-  
-   window.location = "home2.html";
-
- }
 
 
 
