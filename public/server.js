@@ -8,8 +8,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-let usuariosRouter = require("./public/src/routes/usuarios");
-let votosRouter = require("./public/src/routes/votos");
+let usuariosRouter = require("../routes/usuarios");
+let votosRouter = require("../routes/votos");
 
 app.use("/usuarios", usuariosRouter);
 app.use("/votos", votosRouter);
