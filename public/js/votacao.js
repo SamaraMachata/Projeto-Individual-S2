@@ -1,7 +1,7 @@
 function votar(personagem){
  let idUsuario = sessionStorage.ID_USUARIO;
 
- fetch("http://localhost:3333/votos/cadastrar", {
+ fetch("http://localhost:3000/votos/cadastrar", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"

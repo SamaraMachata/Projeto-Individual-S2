@@ -1,4 +1,4 @@
-fetch("http://localhost:3333/votos/listar")
+fetch("http://localhost:3000/votos/listar")
 
 .then(function(resposta){
 
@@ -13,11 +13,11 @@ fetch("http://localhost:3333/votos/listar")
     for(let i = 0; i < dados.length; i++){
         personagens.push(dados[i].personagem);
 
-        votos.push(dados[i].votos);
+        votos.push(dados[i].qtdVotos);
 
     }
 
-    new CharsetToEncoding(document.getElementById("myChart"), {
+    new CharsetToEncoding(document.getElementById("grafico"), {
         type: "bar",
 
         data: {

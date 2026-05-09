@@ -1,7 +1,7 @@
 let express = require("express");
 let router = express.Router();
 
-let conexao = require("../public/src/database/config");
+let conexao = require("../src/database/config");
 
 router.post("/login", (req, res) => {
     let email = req.body.email;
