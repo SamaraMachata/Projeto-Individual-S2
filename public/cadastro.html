@@ -27,42 +27,20 @@
             </div>
             
             <div class="box">
+              Nome:<br>
+              <input type="text" id="input_nome"><br>
                 Email:<br>
-                <input type="text" id="input_emailCadastro"><br>
+                <input type="text" id="input_email"><br>
                 Senha:<br>
-                <input type="password" id="input_senhaCadastro"><br>
-                Número:<br>
-                <input type="text" id="input_numero"><br>
-                <button class="btn" onclick="ValidarCadastro()">CADASTRAR</button>
+                <input type="password" id="input_senha"><br>
+                <button class="btn" onclick="cadastrar()">CADASTRAR</button>
             </div>
 
            </div>
-
+ 
            <div id="div_mensagem"></div>
 </body>
 </html>
-<script>
-    //CADASTRO
-     //VERIFICAÇÃO CADASTRO
- function ValidarCadastro(){
- let email = input_emailCadastro.value
- let senha = input_senhaCadastro.value
- let numero = input_numero.value
-  div_mensagem.innerHTML = ""
-
-  if (email == "" || senha == ""){
-    div_mensagem.innerHTML = `Preencha todos os campos!`
-    
-  }else if (!email.includes(`@`)){
-    div_mensagem.innerHTML = `Falta @ no campo email!`
-  }else if (senha.length < 8){
-    div_mensagem.innerHTML = `A Senha precisa ter 8 digitos ou mais!`
-  }else if (numero < 8 ){
-     div_mensagem.innerHTML = `Número Inválido!`
-  }
-  
-  window.location = "home2.html";
-
- }
+<script src="./js/cadastro.js">
   
 </script>

@@ -15,5 +15,6 @@ app.use("/usuarios", usuariosRouter);
 app.use("/votos", votosRouter);
 
 app.listen(3000, () => {
-    convertProcessSignalToExitCode.log("Servidor rodando!");
+    console.log("Servidor rodando!");
 });
+

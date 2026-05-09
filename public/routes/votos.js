@@ -69,3 +69,5 @@ router.get("/listar", (req, res) => {
         }
     );
 });
+
+module.exports = router;

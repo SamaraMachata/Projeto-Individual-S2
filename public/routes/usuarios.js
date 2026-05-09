@@ -1,3 +1,4 @@
+//ROTA LOGIN
 let express = require("express");
 let router = express.Router();
 
@@ -27,6 +28,33 @@ router.post("/login", (req, res) => {
             }
         }
     );
+});
+
+
+//ROTA CADASTRO
+router.post("/cadastrar", (req, res) => {
+    
+    let nome = req.body.nome;
+    
+    let email = req.body.email;
+
+    let senha = req.body.senha;
+    
+    let sql = `INSERT INTO usuario (nomeCompleto, email, senha) VALUES (?,?,?)`;
+    
+conexao.query(sql, 
+    [nome, email, senha],
+
+    function(erro){
+        if(erro){
+            res.status(500).send(erro);
+            
+        }else {
+            res.send("Cadastro realizado!");
+
+        }
+    }
+);
 });
 
 module.exports = router;
