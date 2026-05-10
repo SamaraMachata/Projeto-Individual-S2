@@ -33,7 +33,10 @@ fetch("http://localhost:3000/votos/listar")
             datasets: [{
                 label: "Quantidade de votos",
                 data: votos,
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: [
+                  '#E100FF'
+        ]
             }]
         },
         options: {
