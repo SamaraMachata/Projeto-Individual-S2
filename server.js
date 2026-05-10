@@ -19,9 +19,9 @@ app.use(express.static("public"));
 
 
 
-let usuariosRouter = require("./public/routes/usuarios");
+let usuariosRouter = require("./routes/usuarios");
 
-let votosRouter = require("./public/routes/votos");
+let votosRouter = require("./routes/votos");
 
 app.use("/usuarios", usuariosRouter);
 
