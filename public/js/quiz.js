@@ -88,7 +88,7 @@ function proximaPergunta(){
         return;
     }
 
-    let resposta = respostaSelecionada.ariaValueMax;
+    let resposta = respostaSelecionada.value;
 
     if(resposta == perguntas[indiceAtual].correta){
         pontos += 10;

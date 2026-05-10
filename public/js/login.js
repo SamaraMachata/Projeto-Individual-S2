@@ -48,6 +48,8 @@ function ValidarLogin(){
             div_mensagem.innerHTML = `Login realizado com sucesso!`;
 
             setTimeout(function(){
+                sessionStorage.ID_USUARIO = dados.idUsuario;
+                
                 window.location = "home2.html";
 
             }, 1000);
