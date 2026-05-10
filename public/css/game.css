@@ -10,10 +10,18 @@ color: white;
 
 padding: 8px;
 }
-.body{
+body{
 background-color: rgb(11, 0, 21);
 color: white;
 text-align: center;
+}
+
+#quiz{
+     display: none;
+}
+
+#fim{
+     display: none;
 }
 
 .quiz{
@@ -23,13 +31,9 @@ text-align: center;
     padding: 50px;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 50px;
 
     margin: 20px auto;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .perguntas{
@@ -37,8 +41,28 @@ text-align: center;
      border: 4px solid white;
      padding: 20px;
 
-     display: flex;
-     justify-content:center;
-    align-items: center;
      gap: 8px;
+}
+
+.resultadoBox{
+     border: 3px solid yellow;
+     width: 500px;
+     margin: auto;
+     padding: 20px;
+     border-radius: 15px;
+     background-color: black;
+}
+
+.cardRanking{
+     border: 2px solid white;
+     width: 300px;
+     margin: 10px auto;
+     padding: 10px;
+     border-radius: 10px;
+}
+
+#graficoRanking,
+#graficoFinal{
+     max-width: 700px;
+     margin: auto;
 }

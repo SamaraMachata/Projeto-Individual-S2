@@ -17,6 +17,10 @@
     display: none;
   }
 
+  #fim{
+    display: none;
+  }
+
   button{
     padding: 10px;
     margin-top: 20px;
@@ -36,13 +40,14 @@
       <canvas id="graficoRanking"></canvas>
     
     </div>
+    <button class="btn" onclick="iniciarQuiz()">START</button>
 
   </div>
+  
   <div class="box_quiz">
        <a href="home2.html"><button class="btn">VOLTAR</button></a>
 
 <br>
-     <button class="btn" onclick="iniciarQuiz()">START</button>
      
      <div class="quiz" id="quiz">
        <h2 id="pergunta"></h2>
@@ -68,7 +73,7 @@
     <canvas id="graficoFinal"></canvas>
   </div>
 
-  <button class="btn" onclick="reiniciarQuiz()"></button>
+  <button class="btn" onclick="reiniciarQuiz()">REINICIAR</button>
 
 </div>
 
