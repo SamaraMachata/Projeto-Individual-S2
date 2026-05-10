@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/game.css">
+<style>
+  body{
+    font-family: Arial;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+
+  #quiz{
+    display: none;
+  }
+
+  button{
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body class="fundo">
+      <button onclick="iniciarQuiz()">START</button>
+      
+      <div id="quiz">
+        <h2 id="pergunta"></h2>
+        <div id="alternativas"></div>
+
+        <button onclick="proximaPergunta()">PRÓXIMA</button>
+      </div>
+
+      <h2 id="resultado"></h2>
+    </body>
+</html>
+<script src="./js/quiz.js">
+
+  
+
+ 
+
+</script>

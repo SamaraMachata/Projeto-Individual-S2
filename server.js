@@ -8,16 +8,6 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-//app.get("/", function(req, res){
-//    res.sendFile(__dirname + "/public/login.html");
-//
-//});
-//
-//app.listen(3000, function(){
-//    convertProcessSignalToExitCode.log("Servidor Rodando!");
-//});
-
-
 
 let usuariosRouter = require("./routes/usuarios");
 
@@ -33,3 +23,6 @@ app.listen(3000, () => {
 
 });
 
+let rankingRouter = require("./routes/ranking");
+
+app.use("/ranking", rankingRouter);
