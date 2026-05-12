@@ -136,3 +136,62 @@ function salvarRanking(){
 
     })
 }
+
+buscarRanking();
+
+function buscarRanking(){
+    fetch("http://localhost:3000/ranking/top5")
+    
+    .then(function(resposta){
+        return resposta.json();
+    })
+
+    .then(function(dados){
+        console.log(dados);
+
+        ranking.innerHTML = ``;
+        rankingFinal.innerHTML = ``;
+
+        let nomes = [];
+        let pontosGrafico = [];
+
+        for(let i = 0; i < dados.length; i++){
+          let medalha = ``;
+
+            if(i == 0){
+                medalha = `🥇`;
+            }else if (i == 1){
+                medalha = `🥈`;
+            }else if(i == 2){
+                medalha = `🥉`;
+            }
+
+            let card = `
+            <div class="cardRanking">
+            <h2>
+            ${medalha} ${i + 1} º Lugar
+            </h2>
+            <p>
+            ${dados[i].nomeCompleto}
+            </p>
+            <p>
+            ${dados[i].pontos} pontos
+            </p>
+            </div>`;
+
+            ranking.innerHTML += card;
+
+            rankingFinal.innerHMTL += card;
+
+            nomes.push(dados[i].pontos);
+        }
+    
+        criarGrafico(nomes, pontosGrafico);
+    });
+}
+
+function criarGrafico(nomes, pontosGrafico){
+    new Chart(graficoRanking, {
+        type: bar
+    })
+}
