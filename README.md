@@ -5,6 +5,7 @@ Projeto Individual de PI - Site Institucional
 
 ## 💜 Sobre o projeto 
 Este é um projeto individual desenvolvido para a **São Paulo Tech School**.
-O Projeto é influenciado pelo jogo Undertale, Undertale Now é uma plataforma interativa dedicada aos admiradores de um dos RPGs independentes mais emblemáticos já criados. O site foi desenvolvido com uma estética Dark-Synth, utilizando uma paleta de cores baseada em tons de roxo profundo e violeta vibrante, que remete à atmosfera misteriosa e encantadora do Subsolo (The Underground).
+Este projeto foi desenvolvido com inspiração no universo de Undertale, trazendo uma experiência interativa voltada para os fãs do jogo. A proposta principal é permitir que os usuários interajam com personagens do jogo atravéz de sistemas como quiz, votação e ranking.
+Oprojeto foi criado com foco em prática de desenvolvimento web utilizando front-end e integração com banco de dados.
 
  ---
