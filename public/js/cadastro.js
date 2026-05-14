@@ -4,8 +4,13 @@ function cadastrar(){
     let senha = input_senha.value;
 
     if(nome == `` || email == `` || senha == ``){
-        div_mensagem.innerHTML = `Preencgha todos os campos!`;
-    }else {
+        div_mensagem.innerHTML = `Preencha todos os campos!`;
+    }else if(!email.includes("@")){
+        div_mensagem.innerHTML = `Falta @!`;
+    }else if(senha.length < 8){
+        div_mensagem.innerHTML = `Senha precisa ter 8 caracteres ou mais!`;
+    }
+    else {
         fetch("http://localhost:3000/usuarios/cadastrar",{
             method: "POST",
 
