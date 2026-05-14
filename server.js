@@ -13,9 +13,13 @@ let usuariosRouter = require("./routes/usuarios");
 
 let votosRouter = require("./routes/votos");
 
+let rankingRouter = require("./routes/ranking");
+
 app.use("/usuarios", usuariosRouter);
 
 app.use("/votos", votosRouter);
+
+app.use("/ranking", rankingRouter);
 
 app.listen(3000, () => {
 
@@ -23,6 +27,3 @@ app.listen(3000, () => {
 
 });
 
-let rankingRouter = require("./routes/ranking");
-
-app.use("/ranking", rankingRouter);

@@ -24,7 +24,7 @@ function votar(personagem){
  })
 
  .then(function(resultado){
-    div_mensagem.innerHTML = `Voto realizado!`;
+    alert(`Voto realizado!`);
 
  })
 

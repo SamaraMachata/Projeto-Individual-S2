@@ -38,7 +38,7 @@ router.get("/listar", (req, res) => {
     FROM ranking
     JOIN usuario 
     ON ranking.fk_usuario = usuario.idUsuario
-    ORDER BY pontos DESC
+    ORDER BY pontos DESC LIMIT 5
     `;
 
     conexao.query(sql,

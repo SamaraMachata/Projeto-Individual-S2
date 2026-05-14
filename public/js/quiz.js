@@ -1,3 +1,20 @@
+
+let inicio = document.getElementById("inicio");
+
+let quiz = document.getElementById("quiz");
+
+let fim = document.getElementById("fim");
+
+let pergunta = document.getElementById("pergunta");
+
+let alternativas = document.getElementById("alternativas");
+
+let resultado = document.getElementById("resultado");
+
+let ranking = document.getElementById("ranking");
+
+let rankingFinal = document.getElementById("rankingFinal");
+
 let perguntas = [
     {
         pergunta: "Quem é o irmão do Sans?",
@@ -59,6 +76,7 @@ let pontos = 0;
 let acertos = 0;
 
 function iniciarQuiz(){
+    inicio.style.display = "none";
     quiz.style.display = "block";
     mostrarPergunta();
 
@@ -107,6 +125,7 @@ function proximaPergunta(){
 
 function finalizarQuiz(){
     quiz.style.display = "none";
+    fim.style.display = "block";
 
     resultado.innerHTML = `
     Você acertou ${acertos} perguntas!
@@ -134,13 +153,13 @@ function salvarRanking(){
     .then(function(resposta){
         console.log("Ranking salvo!");
 
+        buscarRanking();
     })
 }
 
-buscarRanking();
 
 function buscarRanking(){
-    fetch("http://localhost:3000/ranking/top5")
+    fetch("http://localhost:3000/ranking/listar")
     
     .then(function(resposta){
         return resposta.json();
@@ -152,8 +171,6 @@ function buscarRanking(){
         ranking.innerHTML = ``;
         rankingFinal.innerHTML = ``;
 
-        let nomes = [];
-        let pontosGrafico = [];
 
         for(let i = 0; i < dados.length; i++){
           let medalha = ``;
@@ -168,30 +185,33 @@ function buscarRanking(){
 
             let card = `
             <div class="cardRanking">
+            <div class="ladoEsquerdo">
+            <h1 class="medalha">
+            ${medalha}
+            </h1>
+            </div>
+            
+            <div class="ladoDireito">
             <h2>
-            ${medalha} ${i + 1} º Lugar
+            ${i + 1} Lugar
             </h2>
             <p>
-            ${dados[i].nomeCompleto}
+            Jogador: ${dados[i].nomeCompleto}
             </p>
             <p>
-            ${dados[i].pontos} pontos
+            Pontuação:
+            ${dados[i].pontos}
             </p>
-            </div>`;
+            </div>
+            </div>
+            `;
 
             ranking.innerHTML += card;
 
-            rankingFinal.innerHMTL += card;
+            rankingFinal.innerHTML += card;
 
-            nomes.push(dados[i].pontos);
         }
     
-        criarGrafico(nomes, pontosGrafico);
     });
 }
 
-function criarGrafico(nomes, pontosGrafico){
-    new Chart(graficoRanking, {
-        type: bar
-    })
-}
