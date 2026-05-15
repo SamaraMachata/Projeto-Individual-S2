@@ -52,7 +52,12 @@ color: white;
 padding: 8px;
 }
 .fundo{
-background-color: rgb(11, 0, 21);
+background-image: url("../img/imagemfundoinicial.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+margin: 0;;
 color: white;
 }
 .nav_pag_home{
