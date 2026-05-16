@@ -13,6 +13,8 @@ let resultado = document.getElementById("resultado");
 
 let ranking = document.getElementById("ranking");
 
+let img = document.getElementById("img");
+
 let rankingFinal = document.getElementById("rankingFinal");
 
 let perguntas = [
@@ -68,6 +70,128 @@ let perguntas = [
         ],
 
         correta: "Frisk"
+    },
+    {
+        pergunta: "Qual personagem é a capitã da guarda real?",
+
+        alternativas: [
+            "Undyne",
+            "Alphys",
+            "Toriel",
+            "Muffet"
+        ],
+
+        correta: "Undyne"
+    },
+    {
+        pergunta: "Qual é o nome da flor que aparece no inicio do jogo?",
+
+        alternativas: [
+            "Asriel",
+            "Flowey",
+            "Temmie",
+            "Napstablook"
+        ],
+        correta: "Flowey"
+    },
+    {
+        pergunta: "Qual personagem ama cozinhar e fazer quebra-cabeças?",
+
+        alternativas: [
+            "Undyne",
+            "Toriel",
+            "Papyrus",
+            "Asgore"
+        ],
+        correta: "Papyrus"
+    },
+    {
+        pergunta: "Quem é o robô apresentador de TV?",
+
+        alternativas: [
+            "Napstablook",
+            "Muffet",
+            "Mad Mew Mew",
+            "Mettaton"
+        ],
+        correta: "Mettaton"
+    },
+    {
+        pergunta: "Qual rota acontece quando o jogador elimina todos os monstros?",
+
+        alternativas: [
+            "Pacifista",
+            "Neutra",
+            "Genocida",
+            "Verdadeira"
+        ],
+        correta: "Genocida"
+    },
+    {
+        pergunta: "Qual personagem ama anime?",
+        alternativas: [
+            "Alphys",
+            "Toriel",
+            "Muffet",
+            "Undyne"
+        ],
+
+        correta: "Alphys"
+    },
+    {
+        pergunta: "O que representa a alma vermelha do protagonista?",
+        alternativas: [
+            "Justiça",
+            "Coragem",
+            "Determinação",
+            "Bondade"
+        ],
+
+        correta: "Determinação"
+    }, 
+    {
+        pergunta: "Qual personagem fala quase sempre em letras maiúsculas?",
+        alternativas: [
+            "Sans",
+            "Flowey",
+            "Asriel",
+            "Papyrus"
+        ],
+
+        correta: "Papyrus"
+    }, 
+    {
+        pergunta: "Qual personagem gosta muito de trocadilhos?",
+        alternativas: [
+            "Muffet",
+            "Napstablook",
+            "Sans",
+            "Temmie"
+        ],
+
+        correta: "Sans"
+    }, 
+    {
+        pergunta: "Qual personagem é um fantasma tímido e triste?",
+        alternativas: [
+            "Napstablook",
+            "Mettaton",
+            "Asriel",
+            "Temmie"
+        ],
+
+        correta: "Napstablook"
+    }, 
+    {
+        pergunta: "Qual o nome da música tema do Sans?",
+        alternativas: [
+            "Hopes and Dreams",
+            "Bonetrousle",
+            "Spider Dance",
+            "Megalovania"
+        ],
+
+        correta: "Megalovania"
     }
 ];
 
@@ -214,5 +338,7 @@ function buscarRanking(){
     
     });
 }
+
+
 
 
