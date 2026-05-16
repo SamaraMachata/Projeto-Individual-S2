@@ -1,6 +1,8 @@
 button:hover{
      cursor: pointer;
      color: yellow;
+    transform: scale(1.05);
+    border-color: yellow;
 }
 .btn{
    background-color: black;
@@ -50,4 +52,24 @@ background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.kpis{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.kpi{
+    background-color: black;
+    border: 3px solid white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+.kpi:hover{
+    transform: scale(1.05);
+    border-color: yellow;
 }
