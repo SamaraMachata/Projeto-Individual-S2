@@ -55,3 +55,47 @@ fetch("http://localhost:3000/votos/listar")
         console.log("ERRO", erro);
     });
 
+
+    fetch("http://localhost:3000/dashboard/usuarios")
+
+    .then(res => res.json())
+
+    .then(dados => {
+        kpiUsuarios.innerHTML = dados[0].totalUsuarios;
+    });
+
+
+    fetch("http://localhost:3000/dashboard/quiz")
+
+    .then(res => res.json())
+
+    .then(dados => {
+        kpiQuiz.innerHTML = dados[0].totalQuiz;
+    });
+
+    
+    fetch("http://localhost:3000/dashboard/top1")
+
+    .then(function(resposta){
+        return resposta.json();
+    })
+
+    .then(function(dados){
+        if(dados.length > 0){
+            kpiTop1.innerHTML = dados[0].nomeCompleto;
+        }else{
+            kpiTop1.innerHRML = `Sem Ranking`;
+        }
+    });
+
+
+    fetch("http://localhost:3000/dashboard/media")
+
+    .then(res => res.json())
+
+    .then(dados => {
+        kpiMedia.innerHTML = Number(dados[0].media).toFixed(1);
+    });
+
+
+

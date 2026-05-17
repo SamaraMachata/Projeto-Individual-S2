@@ -43,8 +43,8 @@ background-color: black;
     width: 1000px;
     max-width: 95%;
     height: 1000px;
-    border: 2px solid white;
-    border-radius: 10px;
+    border: 3px solid white;
+    border-radius: 15px;
     padding: 0 20px;
 
     margin: 20px auto;
@@ -71,5 +71,9 @@ background-color: black;
 }
 .kpi:hover{
     transform: scale(1.05);
+    border-color: yellow;
+}
+.box_dash:hover{
+     transform: scale(1.05);
     border-color: yellow;
 }
