@@ -19,7 +19,7 @@ let rankingFinal = document.getElementById("rankingFinal");
 
 let perguntas = [
     {
-        pergunta: "Quem é o irmão do Sans?",
+        pergunta: "1- Quem é o irmão do Sans?",
 
         alternativas: [
             "Papyrus",
@@ -32,7 +32,7 @@ let perguntas = [
     },
 
     {
-        pergunta: "Quem é o rei do subterrâneo?",
+        pergunta: "2- Quem é o rei do subterrâneo?",
 
         alternativas: [
             "Sans",
@@ -46,7 +46,7 @@ let perguntas = [
     },
 
     {
-        pergunta: "Quem criou Undertale?",
+        pergunta: "3- Quem criou Undertale?",
 
         alternativas: [
             "Nintendo",
@@ -60,7 +60,7 @@ let perguntas = [
     },
 
     {
-        pergunta: "Qual humano é controlado pelo jogador durante a maior parte de undertale?",
+        pergunta: "4- Qual humano é controlado pelo jogador durante a maior parte de undertale?",
 
         alternativas: [
            "Chara",
@@ -72,7 +72,7 @@ let perguntas = [
         correta: "Frisk"
     },
     {
-        pergunta: "Qual personagem é a capitã da guarda real?",
+        pergunta: "5- Qual personagem é a capitã da guarda real?",
 
         alternativas: [
             "Undyne",
@@ -84,7 +84,7 @@ let perguntas = [
         correta: "Undyne"
     },
     {
-        pergunta: "Qual é o nome da flor que aparece no inicio do jogo?",
+        pergunta: "6- Qual é o nome da flor que aparece no inicio do jogo?",
 
         alternativas: [
             "Asriel",
@@ -95,7 +95,7 @@ let perguntas = [
         correta: "Flowey"
     },
     {
-        pergunta: "Qual personagem ama cozinhar e fazer quebra-cabeças?",
+        pergunta: "7- Qual personagem ama cozinhar e fazer quebra-cabeças?",
 
         alternativas: [
             "Undyne",
@@ -106,7 +106,7 @@ let perguntas = [
         correta: "Papyrus"
     },
     {
-        pergunta: "Quem é o robô apresentador de TV?",
+        pergunta: "8- Quem é o robô apresentador de TV?",
 
         alternativas: [
             "Napstablook",
@@ -117,7 +117,7 @@ let perguntas = [
         correta: "Mettaton"
     },
     {
-        pergunta: "Qual rota acontece quando o jogador elimina todos os monstros?",
+        pergunta: "9- Qual rota acontece quando o jogador elimina todos os monstros?",
 
         alternativas: [
             "Pacifista",
@@ -128,7 +128,7 @@ let perguntas = [
         correta: "Genocida"
     },
     {
-        pergunta: "Qual personagem ama anime?",
+        pergunta: "10- Qual personagem ama anime?",
         alternativas: [
             "Alphys",
             "Toriel",
@@ -139,7 +139,7 @@ let perguntas = [
         correta: "Alphys"
     },
     {
-        pergunta: "O que representa a alma vermelha do protagonista?",
+        pergunta: "11- O que representa a alma vermelha do protagonista?",
         alternativas: [
             "Justiça",
             "Coragem",
@@ -150,7 +150,7 @@ let perguntas = [
         correta: "Determinação"
     }, 
     {
-        pergunta: "Qual personagem fala quase sempre em letras maiúsculas?",
+        pergunta: "12- Qual personagem fala quase sempre em letras maiúsculas?",
         alternativas: [
             "Sans",
             "Flowey",
@@ -161,7 +161,7 @@ let perguntas = [
         correta: "Papyrus"
     }, 
     {
-        pergunta: "Qual personagem gosta muito de trocadilhos?",
+        pergunta: "13- Qual personagem gosta muito de trocadilhos?",
         alternativas: [
             "Muffet",
             "Napstablook",
@@ -172,7 +172,7 @@ let perguntas = [
         correta: "Sans"
     }, 
     {
-        pergunta: "Qual personagem é um fantasma tímido e triste?",
+        pergunta: "14- Qual personagem é um fantasma tímido e triste?",
         alternativas: [
             "Napstablook",
             "Mettaton",
@@ -183,7 +183,7 @@ let perguntas = [
         correta: "Napstablook"
     }, 
     {
-        pergunta: "Qual o nome da música tema do Sans?",
+        pergunta: "15- Qual o nome da música tema do Sans?",
         alternativas: [
             "Hopes and Dreams",
             "Bonetrousle",
