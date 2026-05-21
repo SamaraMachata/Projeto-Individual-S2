@@ -41,7 +41,6 @@ color: white;
 .box_dash{
 background-color: black;
     width: 1000px;
-    max-width: 95%;
     height: 1000px;
     border: 3px solid white;
     border-radius: 15px;
@@ -63,7 +62,7 @@ background-color: black;
 .kpi{
     background-color: black;
     border: 3px solid white;
-    width: 220px;
+    width: 190px;
     padding: 20px;
     border-radius: 15px;
     text-align: center;

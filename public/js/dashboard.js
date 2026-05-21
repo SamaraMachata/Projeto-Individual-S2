@@ -41,9 +41,42 @@ fetch("http://localhost:3000/votos/listar")
         },
         options: {
             responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white',
+                        font: {
+                            size: 14
+                        }
+                    }
+                }
+            },
             scales:{
+                x: {
+                    ticks: {
+                        color: 'white',
+                        font: {
+                            size: 14,
+                            weight: 'bold'
+                        }
+                    },
+
+                    grid: {
+                        color: 'rgba(255,255,255,0.1)'
+                    }
+                },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+
+                    ticks: {
+                        color: 'white',
+                        font: {
+                            size: 14
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(255,255,255,0.1)'
+                    }
                 }
             }
         }
@@ -94,7 +127,7 @@ fetch("http://localhost:3000/votos/listar")
     .then(res => res.json())
 
     .then(dados => {
-        kpiMedia.innerHTML = Number(dados[0].media).toFixed(1);
+        kpiMedia.innerHTML = Number(dados[0].media).toFixed() + "/15";
     });
 
 

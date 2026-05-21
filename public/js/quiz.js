@@ -214,8 +214,10 @@ function mostrarPergunta(){
 
     for(let i = 0; i < perguntaAtual.alternativas.length; i++){
         alternativas.innerHTML += `
+        <label class="alternativa">
         <input type="radio" name="resposta" value="${perguntaAtual.alternativas[i]}">
         ${perguntaAtual.alternativas[i]}
+        </label>
         <br>`;
 
     }
