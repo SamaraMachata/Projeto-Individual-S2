@@ -13,8 +13,6 @@ let resultado = document.getElementById("resultado");
 
 let ranking = document.getElementById("ranking");
 
-let img = document.getElementById("img");
-
 let rankingFinal = document.getElementById("rankingFinal");
 
 let perguntas = [
