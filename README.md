@@ -32,13 +32,13 @@ O principal objetivo do projeto é criar uma experiência interativa para usuár
  ---
 
   ## 👨‍💻 Funcionalidades
-Cadastro de usuários
-Sistema de login
-Dashboard interativa
-Exibição de personagens
-Sistema de ranking
-Exibição de curiosidades
-Navegação entre páginas
+1. Cadastro de usuários
+2. Sistema de login
+3. Dashboard interativa
+4. Exibição de personagens
+5. Sistema de ranking
+6. Exibição de curiosidades
+7. Navegação entre páginas
 
 ---
 
