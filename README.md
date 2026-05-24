@@ -63,3 +63,24 @@ npm start
 O site possui uma interface inspirada na identidade visual de Undertale, utilizando elementos visuais semelhantes aos encontrados no jogo.
 
 ---
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento do projeto foram praticados conhecimentos de:
+
+1. Estruturação de páginas web
+2. Manipulação do DOM
+3. Integração com banco de dados
+4. Intgegração de APIs ao projeto
+5. Organização de projeto
+
+---
+
+## 👥 Integrantes
+Samara Machata
+
+---
+
+## 🏫 Instituição
+
+Projeto desenvolvido na São Paulo Tech School no ano de 2026.
