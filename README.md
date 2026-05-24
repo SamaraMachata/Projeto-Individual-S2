@@ -39,3 +39,27 @@ Exibição de personagens
 Sistema de ranking
 Exibição de curiosidades
 Navegação entre páginas
+
+---
+
+##▶ Como Executar o Projeto
+1. Clonar o repositório
+git clone LINK_DO_REPOSITORIO
+2. Entrar na pasta do projeto
+cd Undertale-Now
+3. Instalar as dependências
+npm install
+4. Configurar o banco de dados MySQL
+
+Crie o banco de dados e execute o script SQL do projeto.
+
+5. Iniciar o servidor
+npm start
+
+---
+
+## 🎨 Layout
+
+O site possui uma interface inspirada na identidade visual de Undertale, utilizando elementos visuais semelhantes aos encontrados no jogo.
+
+---
