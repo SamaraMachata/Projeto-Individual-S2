@@ -42,7 +42,7 @@ O principal objetivo do projeto é criar uma experiência interativa para usuár
 
 ---
 
-##▶ Como Executar o Projeto
+## ▶ Como Executar o Projeto
 1. Clonar o repositório
 git clone LINK_DO_REPOSITORIO
 2. Entrar na pasta do projeto
