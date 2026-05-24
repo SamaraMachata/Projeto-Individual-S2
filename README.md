@@ -22,3 +22,11 @@ Trilhas sonoras
 Informações gerais
 
 O projeto foi desenvolvido com foco em prática de desenvolvimento web utilizando HTML, CSS, JavaScript e banco de dados.
+
+ ---
+
+ ## 🎯 Objetivo
+
+O principal objetivo do projeto é criar uma experiência interativa para usuários interessados no universo de Undertale, além de aplicar conhecimentos técnicos adquiridos durante o curso.
+
+ ---
