@@ -30,3 +30,12 @@ O projeto foi desenvolvido com foco em prática de desenvolvimento web utilizand
 O principal objetivo do projeto é criar uma experiência interativa para usuários interessados no universo de Undertale, além de aplicar conhecimentos técnicos adquiridos durante o curso.
 
  ---
+
+  ## 👨‍💻 Funcionalidades
+Cadastro de usuários
+Sistema de login
+Dashboard interativa
+Exibição de personagens
+Sistema de ranking
+Exibição de curiosidades
+Navegação entre páginas
