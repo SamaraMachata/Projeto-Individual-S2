@@ -10,20 +10,6 @@ Oprojeto foi criado com foco em prática de desenvolvimento web utilizando front
 
  ---
 
-## 📖 Sobre o Projeto
-
-O Undertale Now é uma plataforma web criada para fãs de Undertale, reunindo conteúdos sobre:
-
-História do jogo
-Personagens principais
-Rotas do jogo
-Curiosidades
-Trilhas sonoras
-Informações gerais
-
-O projeto foi desenvolvido com foco em prática de desenvolvimento web utilizando HTML, CSS, JavaScript e banco de dados.
-
- ---
 
  ## 🎯 Objetivo
 
