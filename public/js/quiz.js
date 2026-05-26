@@ -11,8 +11,6 @@ let alternativas = document.getElementById("alternativas");
 
 let resultado = document.getElementById("resultado");
 
-let ranking = document.getElementById("ranking");
-
 let rankingFinal = document.getElementById("rankingFinal");
 
 let perguntas = [
@@ -93,18 +91,7 @@ let perguntas = [
         correta: "Flowey"
     },
     {
-        pergunta: "7- Qual personagem ama cozinhar e fazer quebra-cabeças?",
-
-        alternativas: [
-            "Undyne",
-            "Toriel",
-            "Papyrus",
-            "Asgore"
-        ],
-        correta: "Papyrus"
-    },
-    {
-        pergunta: "8- Quem é o robô apresentador de TV?",
+        pergunta: "7- Quem é o robô apresentador de TV?",
 
         alternativas: [
             "Napstablook",
@@ -115,29 +102,7 @@ let perguntas = [
         correta: "Mettaton"
     },
     {
-        pergunta: "9- Qual rota acontece quando o jogador elimina todos os monstros?",
-
-        alternativas: [
-            "Pacifista",
-            "Neutra",
-            "Genocida",
-            "Verdadeira"
-        ],
-        correta: "Genocida"
-    },
-    {
-        pergunta: "10- Qual personagem ama anime?",
-        alternativas: [
-            "Alphys",
-            "Toriel",
-            "Muffet",
-            "Undyne"
-        ],
-
-        correta: "Alphys"
-    },
-    {
-        pergunta: "11- O que representa a alma vermelha do protagonista?",
+        pergunta: "8- O que representa a alma vermelha do protagonista?",
         alternativas: [
             "Justiça",
             "Coragem",
@@ -148,18 +113,7 @@ let perguntas = [
         correta: "Determinação"
     }, 
     {
-        pergunta: "12- Qual personagem fala quase sempre em letras maiúsculas?",
-        alternativas: [
-            "Sans",
-            "Flowey",
-            "Asriel",
-            "Papyrus"
-        ],
-
-        correta: "Papyrus"
-    }, 
-    {
-        pergunta: "13- Qual personagem gosta muito de trocadilhos?",
+        pergunta: "9- Qual personagem gosta muito de trocadilhos?",
         alternativas: [
             "Muffet",
             "Napstablook",
@@ -170,18 +124,7 @@ let perguntas = [
         correta: "Sans"
     }, 
     {
-        pergunta: "14- Qual personagem é um fantasma tímido e triste?",
-        alternativas: [
-            "Napstablook",
-            "Mettaton",
-            "Asriel",
-            "Temmie"
-        ],
-
-        correta: "Napstablook"
-    }, 
-    {
-        pergunta: "15- Qual o nome da música tema do Sans?",
+        pergunta: "10- Qual o nome da música tema do Sans?",
         alternativas: [
             "Hopes and Dreams",
             "Bonetrousle",
@@ -292,7 +235,6 @@ function buscarRanking(){
     .then(function(dados){
         console.log(dados);
 
-        ranking.innerHTML = ``;
         rankingFinal.innerHTML = ``;
 
 
@@ -329,8 +271,6 @@ function buscarRanking(){
             </div>
             </div>
             `;
-
-            ranking.innerHTML += card;
 
             rankingFinal.innerHTML += card;
 

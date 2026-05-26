@@ -126,8 +126,19 @@ fetch("http://localhost:3000/votos/listar")
 
     .then(res => res.json())
 
-    .then(dados => {
-        kpiMedia.innerHTML = Number(dados[0].media).toFixed() + "/15";
+    .then(function(dados){
+        console.log(dados);
+        console.log(dados[0]);
+
+        if(dados && dados.length > 0){
+            kpiMedia.innerHTML = dados[0].personagem;
+        }else{
+            kpiMedia.innerHTML = `Ainda não há mais votados`
+        }
+    })
+
+    .catch(function(erro){
+        console.log(erro);
     });
 
 

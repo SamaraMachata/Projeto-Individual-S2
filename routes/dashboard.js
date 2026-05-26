@@ -62,8 +62,8 @@ router.get("/top1", (req, res) => {
 
 router.get("/media", (req, res)=> {
     let sql = `
-    SELECT AVG(qtdAcertos) AS media
-    FROM ranking
+    SELECT personagem
+    FROM voto ORDER BY qtdVotos DESC LIMIT 1;
     `;
 
     conexao.query(sql,
