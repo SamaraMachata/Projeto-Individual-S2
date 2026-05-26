@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/sortear.css">
+
+</head>
+<body class="fundo">
+    <nav class="nav_pag_home" >
+        <strong class="titulo_home_nav" >Undertale Now</strong>
+
+           <div class="botoes">
+
+              <a href="home2.html"><button class="btn_voltar">VOLTAR</button></a>
+
+            </div> 
+        </nav>
+    <h1>Veja qual personagem você seria:</h1>
+
+   <button class="btn" onclick="sortear()">SORTEAR</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function sortear(){
+        let aleatorio = Math.random();
+        let min = 1;
+        let max = 14
+        let entre = max - min;
+        let conta = aleatorio * entre - min;
+        let fixado = conta.toFixed();
+
+        if(fixado == 1){
+          div_mensagem.innerHTML = ` <div class="texto" >Você seria a Alphys!</div>
+          `
+          div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Alphys_overworld.webp">
+          
+          `
+        }else if(fixado == 2){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Asgore!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Asgore_Dreemurr_overworld.webp">
+          
+          `
+        }else if(fixado == 3){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Asriel!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Asriel_Dreemurr_overworld.webp">
+            
+            `
+        }else if(fixado == 4){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Flowey!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Flowey_overworld.webp">
+            
+          `
+        }else if(fixado == 5){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria a Frisk!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Frisk_overworld.webp">
+            
+            `
+        }else if(fixado == 6){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria a Mad Mew Mew!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/MadMewMew.webp">
+            
+            `
+        }else if(fixado == 7){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Mettaton!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/mettaton (1).png">
+            
+            `
+        }else if(fixado == 8){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria a Muffet!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/muffet.png">
+            
+            `
+        }else if(fixado == 9){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Napstablook!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Napstablook_overworld.webp">
+            
+            `
+        }else if(fixado == 10){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Papyrus!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Papyrus_overworld.webp">
+            
+            `
+        }else if(fixado ==  11){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria o Sans!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Sans_overworld.webp">
+            
+            `
+        }else if(fixado == 12){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria a Temmie!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/temmie.png">
+            
+            `
+        }else if(fixado == 13){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria a Toriel!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Toriel_overworld.webp">
+            
+            `
+        }else if(fixado == 14){
+            div_mensagem.innerHTML = `<div class="texto" >Você seria a Undyne!</div>
+            `
+            div_mensagem.innerHTML += `<img class="box_personagem" src="./img/Undyne_overworld.webp">
+            
+            `
+        }
+    }
+    </script>
