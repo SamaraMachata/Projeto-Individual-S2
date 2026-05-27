@@ -12,6 +12,10 @@ button:hover{
      padding: 20px;
      color: white;
      margin: 40px;
+     margin-top: 16px;
+     font-size: 18px;
+
+
 }
 .onde{
      height: 300px;
@@ -21,6 +25,9 @@ button:hover{
      padding: 20px;
      margin: 40px;
      color: white;
+     margin-top: 22px;
+     font-size: 18px;
+
 }
 .tecnologia{
      background-color: black;
@@ -28,6 +35,9 @@ button:hover{
      padding: 20px;
      margin: 40px;
      color: white;
+     margin-top: 2px;
+     font-size: 22px;
+
 }
 .caixa{
     height: 300px;
@@ -37,6 +47,24 @@ button:hover{
      padding: 20px;
      margin: 20px;
      color: white;
+     margin-top: 2px;
+     font-size: 18px;
+
+
+}
+.caixa1{
+    height: 500px;
+    width: 300px;
+     background-color: black;
+     border: 4px solid white;
+     padding: 20px;
+     margin: 20px;
+     color: white;
+     margin-top: 0px;
+
+     display: flex;
+     justify-content: center;
+     align-items: self-start;
 }
 
 .box{
@@ -57,9 +85,9 @@ padding: 8px;
 background-image: url("../img/imagemfundoinicial.jpg");
 background-size: cover;
 background-position: center;
-background-repeat: no-repeat;
+background-repeat: repeat-y;
 height: 100vh;
-margin: 0;;
+margin: 0;
 color: white;
 }
 .nav_pag_home{

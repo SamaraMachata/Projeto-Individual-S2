@@ -14,11 +14,21 @@ margin: 0;
 color: white;
 }
 
+.btn_sair{
+   background-color: black;
+    border: 2px solid white;
+border-radius: 0px;
+color: white;
+
+padding: 8px;
+}
 .btn{
    background-color: black;
     border: 2px solid white;
 border-radius: 0px;
 color: white;
+width: 200px;
+    font-size: 18px;
 
 padding: 8px;
 }
